@@ -6,19 +6,25 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://liutao127.github.io">
-  <title>算法题 | lt_haha</title>
+  <title>算法之路 | lt_haha</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="｛% asset_img 1.jpg yyyy %｝">
+  <meta name="description" content="2022-3-181、反向链表">
 <meta property="og:type" content="article">
-<meta property="og:title" content="算法题">
-<meta property="og:url" content="http://liutao127.github.io/2022/03/18/%E7%AE%97%E6%B3%95%E9%A2%98-1/index.html">
+<meta property="og:title" content="算法之路">
+<meta property="og:url" content="http://liutao127.github.io/2022/03/18/%E7%AE%97%E6%B3%95%E4%B9%8B%E8%B7%AF/index.html">
 <meta property="og:site_name" content="lt_haha">
-<meta property="og:description" content="｛% asset_img 1.jpg yyyy %｝">
+<meta property="og:description" content="2022-3-181、反向链表">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-03-18T09:44:33.000Z">
-<meta property="article:modified_time" content="2022-03-18T12:52:00.326Z">
+<meta property="og:image" content="http://liutao127.github.io/2022/03/18/%E7%AE%97%E6%B3%95%E4%B9%8B%E8%B7%AF/%E5%8F%8D%E5%90%91%E9%93%BE%E8%A1%A8%E9%A2%98%E7%9B%AE.png">
+<meta property="og:image" content="http://liutao127.github.io/2022/03/18/%E7%AE%97%E6%B3%95%E4%B9%8B%E8%B7%AF/%E5%8F%8D%E5%90%91%E9%93%BE%E8%A1%A8%E5%B8%B8%E8%A7%84%E8%A7%A3%E9%A2%98%E6%80%9D%E8%B7%AF%E5%9B%BE%E8%A7%A3.png">
+<meta property="og:image" content="http://liutao127.github.io/2022/03/18/%E7%AE%97%E6%B3%95%E4%B9%8B%E8%B7%AF/%E5%8F%8D%E5%90%91%E9%93%BE%E8%A1%A8-%E5%B8%B8%E8%A7%84.png">
+<meta property="og:image" content="http://liutao127.github.io/2022/03/18/%E7%AE%97%E6%B3%95%E4%B9%8B%E8%B7%AF/%E5%8F%8D%E5%90%91%E9%93%BE%E8%A1%A8-%E9%80%92%E5%BD%92.png">
+<meta property="og:image" content="http://liutao127.github.io/2022/03/18/%E7%AE%97%E6%B3%95%E4%B9%8B%E8%B7%AF/%E4%BA%8C%E5%88%86%E6%B3%95.png">
+<meta property="article:published_time" content="2022-03-18T12:56:59.000Z">
+<meta property="article:modified_time" content="2022-03-18T13:05:53.741Z">
 <meta property="article:author" content="coderLT">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://liutao127.github.io/2022/03/18/%E7%AE%97%E6%B3%95%E4%B9%8B%E8%B7%AF/%E5%8F%8D%E5%90%91%E9%93%BE%E8%A1%A8%E9%A2%98%E7%9B%AE.png">
   
     <link rel="alternative" href="/atom.xml" title="lt_haha" type="application/atom+xml">
   
@@ -158,14 +164,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-算法题-1" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-算法之路" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
         
-        <a href="/2022/03/18/%E7%AE%97%E6%B3%95%E9%A2%98-1/" class="archive-article-date">
-  	<time datetime="2022-03-18T09:44:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-03-18</time>
+        <a href="/2022/03/18/%E7%AE%97%E6%B3%95%E4%B9%8B%E8%B7%AF/" class="archive-article-date">
+  	<time datetime="2022-03-18T12:56:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-03-18</time>
 </a>
         
       </header>
@@ -176,13 +182,28 @@
 	<center><p>
   
     <h1 class="article-title_code_ant" itemprop="name">
-      算法题
+      算法之路
     </h1>
   
 </p></center>
 	
       
-        <p>｛% asset_img 1.jpg yyyy %｝</p>
+        <h2 id="2022-3-18"><a href="#2022-3-18" class="headerlink" title="2022-3-18"></a>2022-3-18</h2><h2 id="1、反向链表"><a href="#1、反向链表" class="headerlink" title="1、反向链表"></a>1、反向链表</h2><span id="more"></span>
+
+<img src="/2022/03/18/%E7%AE%97%E6%B3%95%E4%B9%8B%E8%B7%AF/%E5%8F%8D%E5%90%91%E9%93%BE%E8%A1%A8%E9%A2%98%E7%9B%AE.png" class>
+
+<p>思路： </p>
+<img src="/2022/03/18/%E7%AE%97%E6%B3%95%E4%B9%8B%E8%B7%AF/%E5%8F%8D%E5%90%91%E9%93%BE%E8%A1%A8%E5%B8%B8%E8%A7%84%E8%A7%A3%E9%A2%98%E6%80%9D%E8%B7%AF%E5%9B%BE%E8%A7%A3.png" class>
+
+<h3 id="正常解法"><a href="#正常解法" class="headerlink" title="正常解法"></a>正常解法</h3><p>我的java代码：运用第三个空碗来接住下一次的链表结点，然后每次循环，让前面的结点指向 它前面的结点 【即pre】</p>
+<img src="/2022/03/18/%E7%AE%97%E6%B3%95%E4%B9%8B%E8%B7%AF/%E5%8F%8D%E5%90%91%E9%93%BE%E8%A1%A8-%E5%B8%B8%E8%A7%84.png" class>
+
+<h3 id="递归算法"><a href="#递归算法" class="headerlink" title="递归算法"></a>递归算法</h3><img src="/2022/03/18/%E7%AE%97%E6%B3%95%E4%B9%8B%E8%B7%AF/%E5%8F%8D%E5%90%91%E9%93%BE%E8%A1%A8-%E9%80%92%E5%BD%92.png" class>
+
+<p>head.next.next  -》 因为不能每次都通过尾部【即新链表的头部】的next来找到最新的那个结点，所以直接通过改变中间结点【即当前的参数head】的next【即上一次递归回来的next】的next【这里是上次递归回来的结点的next，要往回指【即目前的参数head】】等于head改变结点的指向。   并且将当前结点【即head的next指向空，不然就变成了循环链表了，细品~】</p>
+<h2 id="2、-二分法查找"><a href="#2、-二分法查找" class="headerlink" title="2、 二分法查找"></a>2、 二分法查找</h2><img src="/2022/03/18/%E7%AE%97%E6%B3%95%E4%B9%8B%E8%B7%AF/%E4%BA%8C%E5%88%86%E6%B3%95.png" class>
+
+<p>二分法要注意的是，while循环的终止条件，如果条件不正确，就可能会漏掉比较两个数的可能性，可能就会出错哦~</p>
 
       
 	  
@@ -199,7 +220,7 @@
 				
 				<br>
 				<strong>本文链接：</strong>
-				http://liutao127.github.io/2022/03/18/%E7%AE%97%E6%B3%95%E9%A2%98-1/
+				http://liutao127.github.io/2022/03/18/%E7%AE%97%E6%B3%95%E4%B9%8B%E8%B7%AF/
 				<br>
 				<strong>版权声明：</strong>
 				本作品采用
@@ -308,7 +329,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://liutao127.github.io/2022/03/18/%E7%AE%97%E6%B3%95%E9%A2%98-1/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://liutao127.github.io/2022/03/18/%E7%AE%97%E6%B3%95%E4%B9%8B%E8%B7%AF/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -320,25 +341,6 @@
 </article>
 
   
-<nav id="article-nav">
-  
-    <a href="/2022/03/18/test/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          test
-        
-      </div>
-    </a>
-  
-  
-    <a href="/2022/03/18/%E7%AE%97%E6%B3%95%E9%A2%98/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title"></div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -360,7 +362,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    目录，不存在的…
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#2022-3-18"><span class="toc-number">1.</span> <span class="toc-text">2022-3-18</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81%E5%8F%8D%E5%90%91%E9%93%BE%E8%A1%A8"><span class="toc-number">2.</span> <span class="toc-text">1、反向链表</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%AD%A3%E5%B8%B8%E8%A7%A3%E6%B3%95"><span class="toc-number">2.1.</span> <span class="toc-text">正常解法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%92%E5%BD%92%E7%AE%97%E6%B3%95"><span class="toc-number">2.2.</span> <span class="toc-text">递归算法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E3%80%81-%E4%BA%8C%E5%88%86%E6%B3%95%E6%9F%A5%E6%89%BE"><span class="toc-number">3.</span> <span class="toc-text">2、 二分法查找</span></a></li></ol>
                     </div>
                 </span>
             </div>
