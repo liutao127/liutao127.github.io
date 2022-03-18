@@ -5,26 +5,26 @@
   
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <link rel="dns-prefetch" href="http://example.com">
+  <link rel="dns-prefetch" href="http://liutao127.github.io">
   <title>lt_haha</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="2022-3-181、反向链表 思路：   正常解法我的java代码：运用第三个空碗来接住下一次的链表结点，然后每次循环，让前面的结点指向 它前面的结点 【即pre】  递归算法 head.next.next  -》 因为不能每次都通过尾部【即新链表的头部】的next来找到最新的那个结点，所以直接通过改变中间结点【即当前的参数head】的next【即上一次递归回来的next】的next【这里是上次">
+  <meta name="description" content="2022-3-181、反向链表">
 <meta property="og:type" content="article">
 <meta property="og:title" content="lt_haha">
-<meta property="og:url" content="http://example.com/2022/03/18/%E7%AE%97%E6%B3%95%E9%A2%98/index.html">
+<meta property="og:url" content="http://liutao127.github.io/2022/03/18/%E7%AE%97%E6%B3%95%E9%A2%98/index.html">
 <meta property="og:site_name" content="lt_haha">
-<meta property="og:description" content="2022-3-181、反向链表 思路：   正常解法我的java代码：运用第三个空碗来接住下一次的链表结点，然后每次循环，让前面的结点指向 它前面的结点 【即pre】  递归算法 head.next.next  -》 因为不能每次都通过尾部【即新链表的头部】的next来找到最新的那个结点，所以直接通过改变中间结点【即当前的参数head】的next【即上一次递归回来的next】的next【这里是上次">
+<meta property="og:description" content="2022-3-181、反向链表">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="c:/Users/Administrator/AppData/Roaming/Typora/typora-user-images/image-20220318161346323.png">
-<meta property="og:image" content="c:/Users/Administrator/AppData/Roaming/Typora/typora-user-images/image-20220318161510939.png">
-<meta property="og:image" content="c:/Users/Administrator/AppData/Roaming/Typora/typora-user-images/image-20220318161531022.png">
-<meta property="og:image" content="c:/Users/Administrator/AppData/Roaming/Typora/typora-user-images/image-20220318163757906.png">
-<meta property="og:image" content="c:/Users/Administrator/AppData/Roaming/Typora/typora-user-images/image-20220318165659491.png">
+<meta property="og:image" content="http://liutao127.github.io/2022/03/18/%E7%AE%97%E6%B3%95%E9%A2%98/Users/Administrator/AppData/Roaming/Typora/typora-user-images/image-20220318161346323.png">
+<meta property="og:image" content="http://liutao127.github.io/2022/03/18/%E7%AE%97%E6%B3%95%E9%A2%98/Users/Administrator/AppData/Roaming/Typora/typora-user-images/image-20220318161510939.png">
+<meta property="og:image" content="http://liutao127.github.io/2022/03/18/%E7%AE%97%E6%B3%95%E9%A2%98/Users/Administrator/AppData/Roaming/Typora/typora-user-images/image-20220318161531022.png">
+<meta property="og:image" content="http://liutao127.github.io/2022/03/18/%E7%AE%97%E6%B3%95%E9%A2%98/Users/Administrator/AppData/Roaming/Typora/typora-user-images/image-20220318163757906.png">
+<meta property="og:image" content="http://liutao127.github.io/2022/03/18/%E7%AE%97%E6%B3%95%E9%A2%98/Users/Administrator/AppData/Roaming/Typora/typora-user-images/image-20220318165659491.png">
 <meta property="article:published_time" content="2022-03-18T08:11:36.593Z">
-<meta property="article:modified_time" content="2022-03-18T09:13:20.778Z">
+<meta property="article:modified_time" content="2022-03-18T09:21:49.271Z">
 <meta property="article:author" content="coderLT">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="c:/Users/Administrator/AppData/Roaming/Typora/typora-user-images/image-20220318161346323.png">
+<meta name="twitter:image" content="http://liutao127.github.io/2022/03/18/%E7%AE%97%E6%B3%95%E9%A2%98/Users/Administrator/AppData/Roaming/Typora/typora-user-images/image-20220318161346323.png">
   
     <link rel="alternative" href="/atom.xml" title="lt_haha" type="application/atom+xml">
   
@@ -173,14 +173,16 @@
 	<center><p></p></center>
 	
       
-        <h2 id="2022-3-18"><a href="#2022-3-18" class="headerlink" title="2022-3-18"></a>2022-3-18</h2><h2 id="1、反向链表"><a href="#1、反向链表" class="headerlink" title="1、反向链表"></a>1、反向链表</h2><p><img src="C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20220318161346323.png" alt="image-20220318161346323"></p>
+        <h2 id="2022-3-18"><a href="#2022-3-18" class="headerlink" title="2022-3-18"></a>2022-3-18</h2><h2 id="1、反向链表"><a href="#1、反向链表" class="headerlink" title="1、反向链表"></a>1、反向链表</h2><span id="more"></span>
+
+<p><img src="/2022/03/18/%E7%AE%97%E6%B3%95%E9%A2%98/Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20220318161346323.png" alt="image-20220318161346323"></p>
 <p>思路： </p>
-<p><img src="C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20220318161510939.png" alt="image-20220318161510939"></p>
+<p><img src="/2022/03/18/%E7%AE%97%E6%B3%95%E9%A2%98/Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20220318161510939.png" alt="image-20220318161510939"></p>
 <h3 id="正常解法"><a href="#正常解法" class="headerlink" title="正常解法"></a>正常解法</h3><p>我的java代码：运用第三个空碗来接住下一次的链表结点，然后每次循环，让前面的结点指向 它前面的结点 【即pre】</p>
-<p><img src="C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20220318161531022.png" alt="image-20220318161531022"></p>
-<h3 id="递归算法"><a href="#递归算法" class="headerlink" title="递归算法"></a>递归算法</h3><p><img src="C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20220318163757906.png" alt="image-20220318163757906"></p>
+<p><img src="/2022/03/18/%E7%AE%97%E6%B3%95%E9%A2%98/Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20220318161531022.png" alt="image-20220318161531022"></p>
+<h3 id="递归算法"><a href="#递归算法" class="headerlink" title="递归算法"></a>递归算法</h3><p><img src="/2022/03/18/%E7%AE%97%E6%B3%95%E9%A2%98/Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20220318163757906.png" alt="image-20220318163757906"></p>
 <p>head.next.next  -》 因为不能每次都通过尾部【即新链表的头部】的next来找到最新的那个结点，所以直接通过改变中间结点【即当前的参数head】的next【即上一次递归回来的next】的next【这里是上次递归回来的结点的next，要往回指【即目前的参数head】】等于head改变结点的指向。   并且将当前结点【即head的next指向空，不然就变成了循环链表了，细品~】</p>
-<h2 id="2、-二分法查找"><a href="#2、-二分法查找" class="headerlink" title="2、 二分法查找"></a>2、 二分法查找</h2><p><img src="C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20220318165659491.png" alt="image-20220318165659491"></p>
+<h2 id="2、-二分法查找"><a href="#2、-二分法查找" class="headerlink" title="2、 二分法查找"></a>2、 二分法查找</h2><p><img src="/2022/03/18/%E7%AE%97%E6%B3%95%E9%A2%98/Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20220318165659491.png" alt="image-20220318165659491"></p>
 <p>二分法要注意的是，while循环的终止条件，如果条件不正确，就可能会漏掉比较两个数的可能性，可能就会出错哦~</p>
 
       
@@ -198,7 +200,7 @@
 				
 				<br>
 				<strong>本文链接：</strong>
-				http://example.com/2022/03/18/%E7%AE%97%E6%B3%95%E9%A2%98/
+				http://liutao127.github.io/2022/03/18/%E7%AE%97%E6%B3%95%E9%A2%98/
 				<br>
 				<strong>版权声明：</strong>
 				本作品采用
@@ -307,7 +309,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2022/03/18/%E7%AE%97%E6%B3%95%E9%A2%98/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://liutao127.github.io/2022/03/18/%E7%AE%97%E6%B3%95%E9%A2%98/" alt="微信分享二维码">
     </div>
 </div>
 
