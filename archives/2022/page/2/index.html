@@ -6,21 +6,15 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://liutao127.github.io">
-  <title>刘太太学习笔记 | lt_haha</title>
+  <title>Archives: 2022 | lt_haha</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="2022.3.41.JSP：动态网页">
-<meta property="og:type" content="article">
-<meta property="og:title" content="刘太太学习笔记">
-<meta property="og:url" content="http://liutao127.github.io/2022/03/18/%E5%88%98%E5%A4%AA%E5%A4%AA%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="lt_haha">
+<meta property="og:url" content="http://liutao127.github.io/archives/2022/page/2/index.html">
 <meta property="og:site_name" content="lt_haha">
-<meta property="og:description" content="2022.3.41.JSP：动态网页">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="c:/Users/甜甜/AppData/Roaming/Typora/typora-user-images/image-20220318215321285.png">
-<meta property="article:published_time" content="2022-03-18T14:19:08.000Z">
-<meta property="article:modified_time" content="2022-03-18T14:22:22.169Z">
 <meta property="article:author" content="coderLT">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="c:/Users/甜甜/AppData/Roaming/Typora/typora-user-images/image-20220318215321285.png">
   
     <link rel="alternative" href="/atom.xml" title="lt_haha" type="application/atom+xml">
   
@@ -160,394 +154,52 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-刘太太学习笔记" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-        
-        <a href="/2022/03/18/%E5%88%98%E5%A4%AA%E5%A4%AA%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="archive-article-date">
-  	<time datetime="2022-03-18T14:19:08.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-03-18</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-	
-	
-	<center><p>
+            
   
-    <h1 class="article-title_code_ant" itemprop="name">
-      刘太太学习笔记
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2022" class="archive-year">2022</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2022/03/18/%E7%AE%97%E6%B3%95%E4%B9%8B%E8%B7%AF/" class="archive-article-date">
+  	<time datetime="2022-03-18T12:56:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-03-18</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2022/03/18/%E7%AE%97%E6%B3%95%E4%B9%8B%E8%B7%AF/">算法之路</a>
     </h1>
   
-</p></center>
-	
-      
-        <h1 id="2022-3-4"><a href="#2022-3-4" class="headerlink" title="2022.3.4"></a>2022.3.4</h1><h4 id="1-JSP：动态网页"><a href="#1-JSP：动态网页" class="headerlink" title="1.JSP：动态网页"></a>1.JSP：动态网页</h4><span id="more"></span>
 
-<p>静态、动态：<br>1.不用 和 是否 有“动感” 混为一谈<br>2.判断  是否 随着 时间、地点、用户操作 的改变而改变</p>
-<p>动态网页 需要使用到 服务端脚本语言（JSP）</p>
-<h4 id="2-构架"><a href="#2-构架" class="headerlink" title="2.构架"></a>2.构架</h4><p>CS: Client Server<br>不足：a.如果升级，全部软件都需要升级<br>            b.维护麻烦  需要维护每一台 客户端软件<br>            c.每一台客户端 都需要安装 客户端软件</p>
-<p>BS: Broswer Server<br>客户端 可以通过 浏览器 直接访问服务端</p>
-<p>bs和cs各有优势</p>
-<h5 id="3-tomcat"><a href="#3-tomcat" class="headerlink" title="3.tomcat"></a>3.tomcat</h5><p>bin:可执行文件（startup.bat   shutdown.bat）<br>conf:配置文件（server.xml）<br>lib: tomcat依赖的jar文件<br>log:日志文件（记录出错等信息）<br>temp：临时文件<br>webapps：可执行的项目（j将我们开发的项目 放入该目录）<br>work：存放由jsp翻译成的Java，以及编译成的class文件</p>
-<h5 id="4-配置Tomcat"><a href="#4-配置Tomcat" class="headerlink" title="4.配置Tomcat"></a>4.配置Tomcat</h5><h5 id="5-访问Tomcat—-gt-http-localhost-8888"><a href="#5-访问Tomcat—-gt-http-localhost-8888" class="headerlink" title="5.访问Tomcat—&gt;http://localhost:8888/"></a>5.访问Tomcat—&gt;<a target="_blank" rel="noopener" href="http://localhost:8888/">http://localhost:8888/</a></h5><p>常见状态： 200–&gt;一切正常<br>                    303/301–&gt;页面重定向（跳转）<br>                    404–&gt;资源不存在<br>                    403–&gt;权限不足（如果访问a目录，但是a目录设置 不可见）<br>                    500：–&gt;服务器内部错误（代码有误）</p>
-<h4 id="6-jsp：在html中嵌套的Java代码"><a href="#6-jsp：在html中嵌套的Java代码" class="headerlink" title="6.jsp：在html中嵌套的Java代码"></a>6.jsp：在html中嵌套的Java代码</h4><h4 id="7-JSP执行流程"><a href="#7-JSP执行流程" class="headerlink" title="7.JSP执行流程:"></a>7.JSP执行流程:</h4><p>​            第一次访问：jsp翻译成的Java，以及编译成的class文件<br>​            第二次访问：直接访问class文件，因此速度较快<br>​          （如果服务端代码改了，将会再访问时重新翻译、编译）</p>
-<h5 id="8-Eclipse中的Web项目："><a href="#8-Eclipse中的Web项目：" class="headerlink" title="8.Eclipse中的Web项目："></a>8.Eclipse中的Web项目：</h5><p>   浏览器可以直接访问WebContent中的文件<br>   例如：直接访问<a target="_blank" rel="noopener" href="http://localhost:8888/MyJspProject/index.jsp">http://localhost:8888/MyJspProject/index.jsp</a><br>   其中的index.jsp就在WebContent目录中</p>
-<p>   但是WEB-INF中的文件，无法通过客户端（l浏览器）直接访问<br>   只能通过请求转发来实现。（基于安全考虑！）<br>   注意：并不是任何的内部跳转都能访问WEB-INF，原因是：跳转有2种方式（请求转发、重定向）</p>
-<h5 id="9-配置tomcat运行时环境"><a href="#9-配置tomcat运行时环境" class="headerlink" title="9.配置tomcat运行时环境"></a>9.配置tomcat运行时环境</h5><p>​    jsp &lt;-&gt; Servlet<br>  a:增加一个jar包<br>      在tomcat里面的lib里面的servlet-api.jar包复制到src然后右击包      增加到（构建路径）内路径BuildPath-&gt;Add to…<br>  b:右键项目 -&gt; BuildPath -&gt; Add library -&gt; Server Runtime 加           tomcat的所有jar包</p>
-<h5 id="10-统一字符集编码"><a href="#10-统一字符集编码" class="headerlink" title="10.统一字符集编码"></a>10.统一字符集编码</h5><p>  a.编码分类：<br>    设置jsp文件的编码（jsp文件中的pageEncoding属性）： jsp -&gt; java<br>  b.这是浏览器读取jsp文件的编码（jsp文件中content属性）<br>  一般将上述设置成一样编码,推荐使用UTF-8(国际编码)<br>  c.文本编码：1.将整个eclipse中的文件统一设置（此时开始）<br>                         2.设置某个项目<br>                         3.设置某个单独文件</p>
-<h1 id="2022-3-6"><a href="#2022-3-6" class="headerlink" title="2022.3.6"></a>2022.3.6</h1><h5 id="1-部署tomcat"><a href="#1-部署tomcat" class="headerlink" title="1.部署tomcat"></a>1.部署tomcat</h5><p>一般建议 将eclipse中的tomcat与本地tomcat的配置信息保持一致：将eclipse中的tomcat设置成托管模式，<br>  【第一次启动】双击ServerLocation的第二项。</p>
-<h4 id="2-JSP的页面元素"><a href="#2-JSP的页面元素" class="headerlink" title="2.JSP的页面元素"></a>2.JSP的页面元素</h4><h5 id="a-脚本Scriptlet"><a href="#a-脚本Scriptlet" class="headerlink" title="a.脚本Scriptlet"></a>a.脚本Scriptlet</h5><p>​     i.<br>​          &lt;%<br>​                    定义局部变量、java语句<br>​          %&gt;<br>​    ii.<br>​          &lt;%!<br>​                    定义全局变量、定义方法<br>​          %&gt;<br>​    iii.<br>​          &lt;%= 输出表达式 %&gt;<br>​    iiii.注意<br>​          &lt;%= 想要打印的东西 %&gt; //不需要分号<br>​            一般而言:修改web.xml、配置文件、java 需要重启tomcat服务<br>​                            但是如果修改 Jsp、html、css、js，不需要重启</p>
-<p>​        注意,out.print()和put.println()都不能回车；<br>​        回车：<br></p>
-<h5 id="b-指令"><a href="#b-指令" class="headerlink" title="b.指令"></a>b.指令</h5><p>  page指令(就是开头第一行写的)<br>  &lt;%@ page ….%&gt;<br>  page指定的属性：<br>  language： jsp页面使用的脚本语言<br>  import：导入类<br>  pageEncoding ：jsp文件自身编码 jsp -&gt; java<br>  contentType：浏览器解析jsp的编码</p>
-<h5 id="c-注释"><a href="#c-注释" class="headerlink" title="c.注释"></a>c.注释</h5><p>​    html注释 <!--   -->    可以被客户通过浏览器源代码看见<br>​    java注释 /*  */    和      //<br>​    jsp 注释 &lt;%–  –%&gt;</p>
-<h4 id="3-JSP九大内置对象（自带的，不需要new-也可以使用的对象，有九个）"><a href="#3-JSP九大内置对象（自带的，不需要new-也可以使用的对象，有九个）" class="headerlink" title="3.JSP九大内置对象（自带的，不需要new 也可以使用的对象，有九个）"></a>3.JSP九大内置对象（自带的，不需要new 也可以使用的对象，有九个）</h4><p>  (1)out(输出对象):  向客户端输出 -&gt; 输出对象   eg : out.print</p>
-<p>  (2)pageContext(JSP页面容器)：</p>
-<h5 id="3-request-请求对象-：存储“客户端向服务端发送的信息”"><a href="#3-request-请求对象-：存储“客户端向服务端发送的信息”" class="headerlink" title="(3)request(请求对象)：存储“客户端向服务端发送的信息”"></a>(3)request(请求对象)：存储“客户端向服务端发送的信息”</h5><pre><code>request对象的常见方法：
-1.String 变量名  =  request.getParameter(String name):根据请求的字段名key(input标签的name属性)，返回字段值value
+        <div class="article-info info-on-right">
+          
+          
 
-2.String[] 变量名  =  request.getParameterValues(String name): 根据请求字段名key，返回多个字段值value ( checkbox)
-
-3.void    request.setCharacterEncoding(&quot;编码格式utf-88&quot;)：设置请求post编码(根据版本 tomcat8以后默认编码是UTF-8)
- 4.getRequestDispatcher(“b.jsp”).forward(request, response);  ： -&gt; :请求转发 的方式跳转页面 A -&gt; B
-</code></pre>
-<p>​<br>​    还没学（5）</p>
-<pre><code>5.getServerContext():获取项目的ServletContext对象；
-
-
-     示例：注册：              
-    get提交方式： 
-    method = &quot;get&quot; 和 地址栏、超链接(&lt;a href = &quot;xx&quot;&gt;)请求方式 ， 默认都属于get提交方式
-    （1）get方式： http://localhost:8888/MyFirstJSP/show.jsp?uname=%E7%8E%8B%E7%94%9C%E7%94%9C&amp;upwd=111111&amp;uage=20&amp;uhobbies=%E8%B6%B3%E7%90%83
-            链接/文件？参数名1=参数值1&amp;参数名2=参数值2&amp;参数名3=参数值3
-            get会在地址栏显示出来所请求的参数
-    （2）post方式:http://localhost:8888/MyJspProject/show.jsp
-            post不会显示
-    （3）get和post请求方式的区别：
-        a. get方式在地址栏显示请求信息
-        (地址栏能容纳的信息有限 - 4-5kb；如果请求的是视频、图片等会出现数据无法容纳--报错)；
-           post 不会显示；
-        b. 文件上传操作，必须是post，上述为根本原因
-     推荐使用post
-</code></pre>
-<h5 id="（4）response-响应对象-（服务端给客户端的回应）："><a href="#（4）response-响应对象-（服务端给客户端的回应）：" class="headerlink" title="（4）response(响应对象)（服务端给客户端的回应）："></a>（4）response(响应对象)（服务端给客户端的回应）：</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">提供的方法：</span><br><span class="line">（1）void addCookie(Cookie cookie); 服务端向客户端增加cookie对象</span><br><span class="line">（2）void sendRedirect(String location) throws IOException; :页面跳转的一种方式（重定向）</span><br><span class="line">（3）void setContetType(String type):设置服务端响应的编码（设置服务端的contentType类型）</span><br></pre></td></tr></table></figure>
-
-
-<p>​<br>​    示例：登录  -&gt;  判断<br>​        login.jsp  -&gt;  check.jsp  -&gt; success.jsp<br>​    （超级重点） 请求转发（request）和重定向（response） 的区别<br>​                        请求转发            重定向<br>​    1.地址栏是否改变    不变(check.jsp)    改变(success.jsp)<br>​<br>​    2.是否保留第一次<br>​      请求时的数据     保留（就是name和pwd）       不保留<br>​     （4种范围对象）<br>​<br>​    3.请求次数           1                     2<br>​    4.跳转发生的位置     服务端                客户端<br>​                 </p>
-<pre><code>*** 转发、重定向：
-转发：  张三（客户端） -&gt;  【 服务窗口A（服务端）-&gt;  服务窗口B】
-重定向：张三（客户端） -&gt;  服务窗口A（服务端）   -&gt; 去找B
-       张三（客户端） -&gt;  服务窗口B（服务员）   -&gt; 结束
-</code></pre>
-<p>（5） session(会话对象)：  session(服务端)<br>                a.浏览网站：开始 - 关闭<br>                b.购物：浏览、付款、退出<br>                c.电子邮件：浏览、写邮件、退出</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">Cookie(客户端对象, 不是内置对象 -&gt; 需要new) : Cookie是由服务端生成的，再发送给客户端保存。</span><br><span class="line">相当于本地缓存的作用：客户端(看电影)-&gt;服务端(hello.mp4)-&gt;产生一个Cookie然后发送给-&gt;客户端(hello.mp4) </span><br><span class="line"> 作用：可以提高服务端的访问效率，但是安全性较差。</span><br><span class="line">Cookie到底是什么: key = value</span><br><span class="line">		        由javax.servlet.http.Cookie类产生</span><br><span class="line">public Cookie(String name, String value）: 构造方法</span><br><span class="line"> String getName()： 获取name</span><br><span class="line"> String getValue()： 获取value</span><br><span class="line"> void setMaxAge(int expiry); 最大有效期(秒)</span><br><span class="line">				  </span><br><span class="line">服务端发送给客户端：</span><br><span class="line">a.服务端准备Cookie: response.addCookie(Cookie cookie)；</span><br><span class="line">b.页面跳转(转发， 重定向)：response.sendRedirect(&quot;XXX.jsp&quot;);</span><br><span class="line">c.客户端获取Cookie:  request.getCookies();  //一次全部拿到，然后遍历</span><br><span class="line">注意：		</span><br><span class="line">（1）服务端增加cookie： response对象； 客户端获取对象： request对象</span><br><span class="line">（2）不能直接获取某一个单独对象，只能一次性将全部的cookie拿到</span><br><span class="line"></span><br><span class="line">通过F12可以发现 除了自己设置的Cookie对象外，还有一个name为：JSESSIONID的Cookie</span><br><span class="line"></span><br><span class="line">建议cookie中只保存 英文和数字， 否则需进行编码、解码</span><br><span class="line">使用cookie实现 记住 用户名操作</span><br><span class="line">			</span><br><span class="line">		Cookie: a. 不是内置对象，要用必须new</span><br><span class="line">				b. 但是，服务端会自动生成一个（服务端自动new一个cookie） name = JSESSIONID 的cookie，并返回给客户端</span><br><span class="line">			</span><br><span class="line">			示例：</span><br><span class="line">				登录： </span><br><span class="line">					客户端在第一次请求服务端时，如果服务端发现此请求没有 JSESSIONID，</span><br><span class="line">					则会创建一个 name = JSESSIONID 的cookie并返回客户端</span><br></pre></td></tr></table></figure>
-
-<p>​    </p>
-<pre><code>            session机制：
-                客户端第一次请求服务端时(jsessionid-sessionid)，服务端会产生一个session对象（用于保存该客户的信息）；
-                并且每个session对象都会有一个唯一的sessionID（用于区分其他的session）；
-                服务端会产生一个cookie，并且该cookie的name = JSESSIONID，value = 服务端sessionID的值；
-                然后服务端会在响应客户端的同时将该cookie发送给客户端，至此客户端就有了一个cookie（JSESSIONID）；
-                因此，客户端的cookie就可以和服务端的session一一对应（JSESSIONID - sessionID）；
-                
-                客户端第2/n次登录时，服务端会先用客户端的cookie中的JSESSIONID 去服务端的session中匹配sessionid，
-                如果匹配成功（cookie  jsessionid 和session sessionid），说明此用户不是第一次访问；无需登录；
-                
-                例子：
-                    客户端：          顾客（客户端）
-                    服务端：存包处  - 商场（服务端）
-                    顾客第一次去存包：商场判断此人是否之前已经存过包（通过手里是否有钥匙）。
-                    如果新顾客（没钥匙），会分配一把钥匙给顾客；钥匙会和柜子一一对应；
-                    如果顾客第2/n次去存包，商场判断此人是否之前已经存过包（通过手里是否有钥匙）。
-                    如果是老顾客（有钥匙），则不需要分配；该顾客手里的钥匙会和柜子一一对应。
-                
-            session：
-                a. session存储在服务端
-                b. session是在同一个用户请求时共享
-                c. 实现机制：第一次顾客请求时，产生一个sessionid并复制给cookie的jsessionid然后发送给客户端。
-                   最终通过session的sessionid和cookie的jsessionid一一对应。
-            session方法：
-                String getId():获取sesssionId
-                boolean isNew():判断是否是该用户第一次访问
-                void invalidate():使session（内置对象）失效(退出使用、注销)
-                void setMaxInactiveInterval(秒):设置最大有效 **非活动时间**（最大离开时间 -&gt; 重新登录）
-                int getMaxInactiveInterval():获取最大的有效  非活动时间
-                
-                void setAttribute():赋值
-                Object getAttribute():得到
-</code></pre>
-<p>​<br>​                建议cookie中只保存 英文和数字， 否则需进行编码、解码<br>​                使用cookie实现保存用户名操作<br>​<br>​            Cookie: a. 不是内置对象，要用必须new<br>​                    b. 但是，服务端会自动生成一个（服务端自动new一个cookie） name = JSESSIONID 的cookie，并返回给客户端<br>​                </p>
-<pre><code>            示例：
-                登录： 
-                    客户端在第一次请求服务端时，如果服务端发现此请求没有 JSESSIONID，
-                    则会创建一个 name = JSESSIONID 的cookie并返回客户端
-</code></pre>
-<p>​    cookie和session的区别:<br>​                                session             cookie<br>​    保存的位置         服务端               客户端<br>​     安全性                较安全            较不安全<br>​    保存内容              Object             String</p>
-<p>​            </p>
-<p>  （6）applicaton(全局对象)：<br>        String getContextPath(): 获取虚拟路径<br>        String getRealPath(String name): 绝对路径(虚拟路径对应的绝对路径)</p>
-<p>  （7）config(配置对象)：服务器配置信息</p>
-<p>  （8）page(当前JSP页面对象)：相当于java中的this</p>
-<p>  （9）exception(异常对象)：</p>
-<h4 id="4-统一请求的编码-request"><a href="#4-统一请求的编码-request" class="headerlink" title="4.统一请求的编码 request"></a>4.统一请求的编码 request</h4><h5 id="get方式请求-如果出现乱码，解决如下："><a href="#get方式请求-如果出现乱码，解决如下：" class="headerlink" title="get方式请求  如果出现乱码，解决如下："></a>get方式请求  如果出现乱码，解决如下：</h5><p>   a.统一每一个变量的编码，也就是一个一个的改( 不推荐 )<br>        变量名 = new String(变量名.getBytes(“旧编码”)， “新编码”);<br>        eg—&gt;name = new String(name.getBytes(“iso-8859-1”),“utf-8”);</p>
-<p>   b.修改server.xml ， 一次性的更改tomcat默认get提交方式的编码(utf-8)</p>
-<pre><code>   server.xml中统一get方式的编码， URIEncoding=&quot;UTF-8&quot;(在改网页地址的那一行最后边加上                            URIEncoding=&quot;UTF-8&quot;)
-</code></pre>
-<p> 建议：在使用tomcat刚开始时，就改掉。</p>
-<h5 id="post方式请求"><a href="#post方式请求" class="headerlink" title="post方式请求"></a>post方式请求</h5><p>   request.setCharacterEncoding(“utf-8”);           </p>
-<h1 id="2022-3-18（HTML笔记）"><a href="#2022-3-18（HTML笔记）" class="headerlink" title="2022.3.18（HTML笔记）"></a>2022.3.18（HTML笔记）</h1><h3 id="一、超链接"><a href="#一、超链接" class="headerlink" title="一、超链接"></a>一、超链接</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;a href=&quot;https://www.runoob.com/&quot;&gt;访问菜鸟教程&lt;/a&gt;</span><br></pre></td></tr></table></figure>
-
-<h5 id="1-链接-target-属性"><a href="#1-链接-target-属性" class="headerlink" title="1.链接 - target 属性"></a>1.链接 - target 属性</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;a href=&quot;https://www.runoob.com/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;访问菜鸟教程!&lt;/a&gt;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">对于写了target=&quot;_blank&quot;的a标签，如果不带上 rel=“noopener noreferrer” 属性，会存在以下问题：</span><br><span class="line"> 1、性能问题：新打开的页面，和当前页面是在一个进程里的，如果新打开的页面比较耗资源，那当前页面的性能也会受到影响；</span><br><span class="line"></span><br><span class="line">2、安全问题：新打开的页面可以通过window.opener操作上个页面，这可能会让你的上个页面重定向到不安全的钓鱼网站。</span><br><span class="line"></span><br><span class="line">带上 rel=“noopener noreferrer” 属性的话，新打开的页面是在新的进程中运行，不影响上个页面，而且新页面拿到的 window.opener = null，无法在获取上个页面进行操作。</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">target=&quot;_blank&quot;---&gt;在新窗口打开 链接</span><br><span class="line">target=&quot;_self&quot;---&gt;默认   在当前窗口打开 链接</span><br><span class="line">target=&quot;_parent&quot;---&gt;在父窗口打开 链接</span><br><span class="line">				（属性作用使得文档载入父窗口或者包含来超链接引用的框架的框架集。如果这个引用是在窗口					 或者在顶级框架中，那么它与目标 _self 等效。）</span><br><span class="line">target=&quot;_top&quot;---&gt;在当前窗体打开链接，并替换当前的整个窗体(框架页)。</span><br><span class="line"> </span><br><span class="line">  设置 target 属性时， top 与 parent 的打开方式十分类似，需仔细区分。</span><br><span class="line">  比如网 A 中镶嵌了 iframe 网页 B，网页 B 又镶嵌了 iframe 网页C。</span><br><span class="line"></span><br><span class="line">  如果网页 C 中连接设置 target=_parent，则跳转将网页 B 去掉直接在 A 中嵌入网页 C 中链接页面。</span><br><span class="line">  如果网页 C 中 target=_top ，则直接跳出所有 iframe 框架，直接转向 C 中链接页面。</span><br></pre></td></tr></table></figure>
-
-
-
-<h5 id="2-在-当前页面-链接到指定的位置（点击-查看章节4-直接跳到-章节四-）"><a href="#2-在-当前页面-链接到指定的位置（点击-查看章节4-直接跳到-章节四-）" class="headerlink" title="2.在 当前页面 链接到指定的位置（点击   查看章节4    直接跳到 章节四 ）"></a>2.在 当前页面 链接到指定的位置（点击   查看章节4    直接跳到 章节四 ）</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">在HTML文档中插入ID:  &lt;a id=&quot;tips&quot;&gt;有用的提示部分&lt;/a&gt;</span><br><span class="line"></span><br><span class="line">在HTML文档中创建一个链接到&quot;有用的提示部分(id=&quot;tips&quot;）&quot;：   &lt;a href=&quot;#tips&quot;&gt;访问有用的提示部分&lt;/a&gt;</span><br><span class="line"></span><br><span class="line">从另一个页面创建一个链接到&quot;有用的提示部分(id=&quot;tips&quot;）&quot;：</span><br><span class="line">												&lt;a href=&quot;网页链接#tips&quot;&gt;访问有用的提示部分&lt;/a&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line"></span><br><span class="line">&lt;p&gt;</span><br><span class="line">&lt;a href=&quot;#C4&quot;&gt;查看章节 4&lt;/a&gt;                      //注意</span><br><span class="line">&lt;/p&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&lt;h2&gt;章节 1&lt;/h2&gt;</span><br><span class="line">&lt;p&gt;这边显示该章节的内容……&lt;/p&gt;</span><br><span class="line"></span><br><span class="line">&lt;h2&gt;章节 2&lt;/h2&gt;</span><br><span class="line">&lt;p&gt;这边显示该章节的内容……&lt;/p&gt;</span><br><span class="line"></span><br><span class="line">&lt;h2&gt;章节 3&lt;/h2&gt;</span><br><span class="line">&lt;p&gt;这边显示该章节的内容……&lt;/p&gt;</span><br><span class="line"></span><br><span class="line">&lt;h2&gt;&lt;a id=&quot;C4&quot;&gt;章节 4&lt;/a&gt;&lt;/h2&gt;                    //注意</span><br><span class="line">&lt;p&gt;这边显示该章节的内容……&lt;/p&gt;</span><br><span class="line"></span><br><span class="line">&lt;h2&gt;章节 5&lt;/h2&gt;</span><br><span class="line">&lt;p&gt;这边显示该章节的内容……&lt;/p&gt;</span><br><span class="line"></span><br><span class="line">&lt;h2&gt;章节 6&lt;/h2&gt;</span><br><span class="line">&lt;p&gt;这边显示该章节的内容……&lt;/p&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h5 id="3-图片链接"><a href="#3-图片链接" class="headerlink" title="3.图片链接"></a>3.图片链接</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;a href=&quot;//www.runoob.com/html/html-tutorial.html&quot;&gt;</span><br><span class="line">&lt;img  border=&quot;10&quot; src=&quot;图片的地址&quot; alt=&quot;HTML 教程&quot; width=&quot;32&quot; height=&quot;32&quot;&gt;&lt;/a&gt;</span><br></pre></td></tr></table></figure>
-
-<h5 id="4-跳出框架（链接-target-属性）"><a href="#4-跳出框架（链接-target-属性）" class="headerlink" title="4.跳出框架（链接 - target 属性）"></a>4.跳出框架（链接 - target 属性）</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;p&gt;跳出框架?（假如页面被固定在框架之内）&lt;/p&gt; </span><br><span class="line">&lt;a href=&quot;//www.runoob.com/&quot; target=&quot;_top&quot;&gt;点击这里!&lt;/a&gt; </span><br></pre></td></tr></table></figure>
-
-<h5 id="5-创建电子邮件链接"><a href="#5-创建电子邮件链接" class="headerlink" title="5.创建电子邮件链接"></a>5.创建电子邮件链接</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&lt;a href=&quot;mailto:someone@example.com?Subject=Hello%20again&quot; target=&quot;_top&quot;&gt;发送邮件&lt;/a&gt;</span><br><span class="line"></span><br><span class="line">&lt;a href=&quot;mailto:someone@example.com?cc=someoneelse@example.com&amp;bcc=andsomeoneelse@example.com&amp;subject=Summer%20Party&amp;body=You%20are%20invited%20to%20a%20big%20summer%20party!&quot; target=&quot;_top&quot;&gt;发送邮件!&lt;/a&gt;</span><br><span class="line"></span><br><span class="line">（1）在进行邮件内容发送时，需要使用关键字：mailto</span><br><span class="line">（2）单词之间空格使用 %20 代替，以确保浏览器可以正常显示文本。</span><br><span class="line">（3）mailto:name@email.com	邮件接收地址</span><br><span class="line">	cc=name@email.com		 抄送地址</span><br><span class="line">	bcc=name@email.com		 密件抄送地址</span><br><span class="line">	subject=subject text	 邮件主题</span><br><span class="line">	body=body text			 邮件内容</span><br><span class="line">			?				 第一个参数分隔符</span><br><span class="line">			&amp;				 其他参数分隔符</span><br><span class="line">（4）rel=&quot;nofollow&quot;---&gt;nofollow 是 HTML 页面中 a 标签的属性值。这个标签的意义是告诉搜索引擎&quot;不要追踪								此网页上的链接或不要追踪此特定链接&quot;。</span><br></pre></td></tr></table></figure>
-
-<h3 id="二、图片"><a href="#二、图片" class="headerlink" title="二、图片"></a>二、图片</h3><h5 id="1-图像-Alt属性"><a href="#1-图像-Alt属性" class="headerlink" title="1.图像- Alt属性"></a>1.图像- Alt属性</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;img  border=&quot;10&quot; src=&quot;图片的地址&quot; alt=&quot;HTML 教程&quot; width=&quot;32&quot; height=&quot;32&quot;&gt;&lt;/a&gt;</span><br><span class="line">在浏览器无法载入图像时，浏览器将显示这个替代性的文本而不是图像</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">border=&quot;0&quot;----&gt;图片无边框</span><br><span class="line">width=&quot;32&quot; height=&quot;32&quot;-----&gt;图像- 设置图像的高度与宽度</span><br></pre></td></tr></table></figure>
-
-<h5 id="2-浮动图片（使用了-CSS-float-属性）"><a href="#2-浮动图片（使用了-CSS-float-属性）" class="headerlink" title="2.浮动图片（使用了 CSS float 属性）"></a>2.浮动图片（使用了 CSS float 属性）</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;p&gt;</span><br><span class="line">&lt;img src=&quot;...&quot; alt=&quot;图片显示不出来则呈现这句话&quot; style=&quot;float:right&quot; width=&quot;32&quot; height=&quot;32&quot;&gt; </span><br><span class="line">一个带图片的段落，图片浮动在这个文本的右边。</span><br><span class="line">&lt;/p&gt;</span><br><span class="line"></span><br><span class="line">style=&quot;float:left&quot;---&gt;图片浮动在这个文本的左边。</span><br></pre></td></tr></table></figure>
-
-<h5 id="3-图像映射"><a href="#3-图像映射" class="headerlink" title="3.图像映射"></a>3.图像映射</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">&lt;img&gt;	定义图像</span><br><span class="line">&lt;map&gt;	定义图像地图</span><br><span class="line">&lt;area&gt;	定义图像地图中的可点击区域</span><br><span class="line"></span><br><span class="line">eg:创建带有可供点击区域的图像地图。其中的每个区域都是一个超级链接。</span><br><span class="line">	&lt;img src=&quot;。。。&quot; width=&quot;145&quot; height=&quot;126&quot; alt=&quot;。。。&quot; usemap=&quot;#planetmap&quot;&gt;</span><br><span class="line"></span><br><span class="line">	&lt;map name=&quot;planetmap&quot;&gt;</span><br><span class="line">  		&lt;area shape=&quot;rect&quot; coords=&quot;0,0,82,126&quot; alt=&quot;Sun&quot; href=&quot;sun.htm&quot;&gt;</span><br><span class="line">  		&lt;area shape=&quot;circle&quot; coords=&quot;90,58,3&quot; alt=&quot;Mercury&quot; href=&quot;mercur.htm&quot;&gt;</span><br><span class="line">  		&lt;area shape=&quot;circle&quot; coords=&quot;124,58,8&quot; alt=&quot;Venus&quot; href=&quot;venus.htm&quot;&gt;</span><br><span class="line">	&lt;/map&gt;</span><br><span class="line">	</span><br><span class="line">该段代码中的shape指的是点击区域的形状，coords指的应该是链接区域在图片中的坐标（像素为单位）</span><br><span class="line"></span><br><span class="line">1、矩形：(左上角顶点坐标为(x1,y1)，右下角顶点坐标为(x2,y2))</span><br><span class="line">&lt;area shape=&quot;rect&quot; coords=&quot;x1,y1,x2,y2&quot; href=url&gt;</span><br><span class="line">2、圆形：(圆心坐标为(X1,y1)，半径为r)</span><br><span class="line">&lt;area shape=&quot;circle&quot; coords=&quot;x1,y1,r&quot; href=url&gt;</span><br><span class="line">3、多边形：(各顶点坐标依次为(x1,y1)、(x2,y2)、(x3,y3) ......)</span><br><span class="line">&lt;area shape=&quot;poly&quot; coords=&quot;x1,y1,x2,y2 ......&quot; href=url&gt;</span><br></pre></td></tr></table></figure>
-
-<h3 id="三、缩写"><a href="#三、缩写" class="headerlink" title="三、缩写"></a>三、缩写</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;p&gt;The &lt;abbr title=&quot;World Health Organization&quot;&gt;WHO&lt;/abbr&gt; was founded in 1948.&lt;/p&gt;</span><br><span class="line"></span><br><span class="line">打印出来---&gt;The WHO was founded in 1948.</span><br></pre></td></tr></table></figure>
-
-<h3 id="四-HTML-样式-CSS"><a href="#四-HTML-样式-CSS" class="headerlink" title="四.HTML 样式- CSS"></a>四.HTML 样式- CSS</h3><h5 id="1-使用-style-属性制作一个没有下划线的链接。"><a href="#1-使用-style-属性制作一个没有下划线的链接。" class="headerlink" title="1.使用 style 属性制作一个没有下划线的链接。"></a>1.使用 style 属性制作一个没有下划线的链接。</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;a href=&quot;//www.runoob.com/&quot; style=&quot;text-decoration:none;&quot;&gt;访问 runoob.com!&lt;/a&gt;</span><br></pre></td></tr></table></figure>
-
-<h5 id="2-内部样式表-在HTML文档头部-区域使用-元素-来包含CSS"><a href="#2-内部样式表-在HTML文档头部-区域使用-元素-来包含CSS" class="headerlink" title="2.内部样式表 -在HTML文档头部  区域使用 元素 来包含CSS"></a>2.内部样式表 -在HTML文档头部 <head> 区域使用<style> <strong>元素</strong> 来包含CSS</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&lt;head&gt;</span><br><span class="line">&lt;meta charset=&quot;utf-8&quot;&gt; </span><br><span class="line">&lt;title&gt;菜鸟教程(runoob.com)&lt;/title&gt;</span><br><span class="line"></span><br><span class="line">&lt;style type=&quot;text/css&quot;&gt;</span><br><span class="line">h1 &#123;color:red;&#125;</span><br><span class="line">p &#123;color:blue;&#125;</span><br><span class="line">&lt;/style&gt;</span><br><span class="line"></span><br><span class="line">&lt;/head&gt;</span><br><span class="line"></span><br><span class="line">&lt;body&gt;</span><br><span class="line">&lt;h1&gt;这是一个标题&lt;/h1&gt;</span><br><span class="line">&lt;p&gt;这是一个段落。&lt;/p&gt;</span><br><span class="line">&lt;/body&gt;</span><br></pre></td></tr></table></figure>
-
-<h5 id="3-内联样式-在HTML元素中使用”style”-属性"><a href="#3-内联样式-在HTML元素中使用”style”-属性" class="headerlink" title="3.内联样式-在HTML元素中使用”style” 属性"></a>3.内联样式-在HTML元素中使用”style” 属性</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;p style=&quot;color:blue;margin-left:20px;&quot;&gt;这是一个段落。&lt;/p&gt;  -----&gt;颜色，左外边距</span><br><span class="line"></span><br><span class="line">style=&quot;background-color:yellow;&quot; -----&gt;背景颜色</span><br><span class="line">style=&quot;font-family:verdana;&quot; -----&gt;字体</span><br><span class="line">style=&quot;font-size:20px;&quot; -----&gt;字体大小</span><br><span class="line">style=&quot;text-align:center;&quot; -----&gt;文字对齐(center,left,right)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h5 id="4-外部引用-使用外部-CSS-文件（推荐）"><a href="#4-外部引用-使用外部-CSS-文件（推荐）" class="headerlink" title="4.外部引用 - 使用外部 CSS 文件（推荐）"></a>4.外部引用 - 使用外部 CSS 文件（推荐）</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;head&gt;</span><br><span class="line">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;mystyle.css&quot;&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line"></span><br><span class="line">&lt;link&gt; 标签定义文档与外部资源的关系。</span><br><span class="line">&lt;link&gt; 标签最常见的用途是链接样式表。</span><br><span class="line">注意： link 元素是空元素，它仅包含属性。</span><br><span class="line">注意： 此元素只能存在于 head 部分，不过它可出现任何次数。</span><br><span class="line"></span><br><span class="line">&lt;style&gt; 标签定义 HTML 文档的样式信息。</span><br><span class="line">在 &lt;style&gt; 元素中，您可以规定在浏览器中如何呈现 HTML 文档。</span><br><span class="line">每个 HTML 文档能包含多个 &lt;style&gt; 标签。</span><br></pre></td></tr></table></figure>
-
-<h3 id="四-表格"><a href="#四-表格" class="headerlink" title="四.表格"></a>四.表格</h3><h5 id="1-基本知识"><a href="#1-基本知识" class="headerlink" title="1.基本知识"></a>1.基本知识</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;table&gt;		定义表格</span><br><span class="line">&lt;th&gt;		定义表格的表头</span><br><span class="line">&lt;tr&gt;		定义表格的行</span><br><span class="line">&lt;td&gt;		定义表格单元</span><br><span class="line">&lt;caption&gt;	定义表格标题	-----&gt;	&lt;caption&gt;Monthly savings&lt;/caption&gt;</span><br><span class="line">&lt;colgroup&gt;	定义表格列的组</span><br><span class="line">&lt;col&gt;		定义用于表格列的属性</span><br><span class="line">&lt;thead&gt;		定义表格的页眉</span><br><span class="line">&lt;tbody&gt;		定义表格的主体</span><br><span class="line">&lt;tfoot&gt;		定义表格的页脚</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">HTML中的table可以大致分为三个部分：（thead, tbody, tfoot 相当于三间房子，每间房子都可以用来放东西。）</span><br><span class="line"> thead ---------表格的页眉</span><br><span class="line"> tbody ---------表格的主体</span><br><span class="line"> tfoot ---------定义表格的页脚</span><br><span class="line"></span><br><span class="line">&lt;tr&gt; &lt;/tr&gt; 这个标签就是放在三间房子里面的东西，每一个 &lt;tr&gt; &lt;/tr&gt; 就是表格一行。</span><br><span class="line">表格的每一行被分为一个个单元格。</span><br><span class="line"></span><br><span class="line">每一个单元格就是用来存放数据的，这个数据分为两种：一，数据的名称；二，数据本身。</span><br><span class="line">用 &lt;th&gt;&lt;/th&gt; 表示数据的名称(标题) ,</span><br><span class="line">&lt;td&gt;&lt;/td&gt;表示真正的数据内容。</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p><img src="C:\Users\甜甜\AppData\Roaming\Typora\typora-user-images\image-20220318215321285.png" alt="image-20220318215321285"></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">表格三要素 table、tr、td 缺一不可。</span><br><span class="line"></span><br><span class="line">&lt;table&gt; 标签常用属性：</span><br><span class="line"></span><br><span class="line">border=&quot;1&quot;   表格边框的宽度</span><br><span class="line">bordercolor=&quot;#fff&quot;   表格边框的颜色</span><br><span class="line">cellspacing=&quot;5&quot;   单元格之间的间距</span><br><span class="line">cellpadding=&quot;10&quot;  单元格边距</span><br><span class="line">width=&quot;500&quot;   表格的总宽度</span><br><span class="line">height=&quot;100&quot;   表格的总高度</span><br><span class="line">align=&quot;right&quot;   表格整体对齐方式    (参数有  left、center、right)</span><br><span class="line">bgcolor=&quot;#fff&quot;   表格整体的背景色</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&lt;tr&gt; 标签的常用属性:</span><br><span class="line"></span><br><span class="line">bgcolor=&quot;#fff&quot;    行的颜色</span><br><span class="line">align=&quot;right&quot;    行内文字的水平对齐方式    (参数有left、center、right)</span><br><span class="line">valign=&quot;top&quot;     行内文字的垂直对齐方式    (参数有top、middle、bottom)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&lt;td&gt;、&lt;th&gt; 标签的常用属性:</span><br><span class="line"></span><br><span class="line">width=&quot;500&quot;    单元格的宽度，设置后对当前一列的单元格都有影响</span><br><span class="line">height=&quot;100&quot;   单元格的高度，设置后对当前一行的单元格都有影响</span><br><span class="line">bgcolor=&quot;fff&quot;  单元格的背景色</span><br><span class="line">align=&quot;right&quot;  单元格文字的水平对齐方式    (参数left、center、right)</span><br><span class="line">rowspan=&quot;3&quot;    合并垂直水平方向的单元格</span><br><span class="line">colspan=&quot;3&quot;    合并水平方向单元格</span><br><span class="line">valign=&quot;top&quot;   单元格文字的垂直对齐方式    (参数middle、bottom、top) </span><br></pre></td></tr></table></figure>
-
-</style></head></h5>
-      
-	  
-	  
-	  
-	  
-		
-		
-		  <div>
-			<blockquote>
-				<strong>本文作者：</strong>
-				
-				  coderLT
-				
-				<br>
-				<strong>本文链接：</strong>
-				http://liutao127.github.io/2022/03/18/%E5%88%98%E5%A4%AA%E5%A4%AA%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/
-				<br>
-				<strong>版权声明：</strong>
-				本作品采用
-				<a rel="license noopener" target="_blank" href="https://www.baidu.com">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>
-				进行许可。转载请注明出处！
-				
-				  <br>
-				  <a rel="license noopener" target="_blank" href="https://www.baidu.com"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png"/></a>
-				
-			</blockquote>
-			
-			
-			<hr>
-				<center><strong>感谢有你，伴我成长。</strong></center>
-			<hr>
-		  </div>
-		
-		
-		
-	  
-	  
-
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    <div class="reward-box-item">
-                      <img class="reward-img" src="/assets/img/alipay.jpg">
-                      <span class="reward-type">支付宝</span>
-                    </div>
-                    
-                    
-                    <div class="reward-box-item">
-                      <img class="reward-img" src="/assets/img/wechat.jpg">
-                      <span class="reward-type">微信</span>
-                    </div>
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
         </div>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
-        </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://liutao127.github.io/2022/03/18/%E5%88%98%E5%A4%AA%E5%A4%AA%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2022/03/19/SQL%E4%B9%8B%E8%B7%AF/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          SQL之路
-        
-      </div>
-    </a>
   
   
-    <a href="/2022/03/18/%E7%AE%97%E6%B3%95%E4%B9%8B%E8%B7%AF/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">算法之路</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-        <div class="toc-container tooltip-left">
-            <i class="icon-font icon-category"></i>
-            <div class="tooltip tooltip-east">
-                <span class="tooltip-item">
-                </span>
-                <span class="tooltip-content">
-                    <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#2022-3-4"><span class="toc-number">1.</span> <span class="toc-text">2022.3.4</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-JSP%EF%BC%9A%E5%8A%A8%E6%80%81%E7%BD%91%E9%A1%B5"><span class="toc-number">1.0.0.1.</span> <span class="toc-text">1.JSP：动态网页</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E6%9E%84%E6%9E%B6"><span class="toc-number">1.0.0.2.</span> <span class="toc-text">2.构架</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#3-tomcat"><span class="toc-number">1.0.0.2.1.</span> <span class="toc-text">3.tomcat</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#4-%E9%85%8D%E7%BD%AETomcat"><span class="toc-number">1.0.0.2.2.</span> <span class="toc-text">4.配置Tomcat</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#5-%E8%AE%BF%E9%97%AETomcat%E2%80%94-gt-http-localhost-8888"><span class="toc-number">1.0.0.2.3.</span> <span class="toc-text">5.访问Tomcat—&gt;http:&#x2F;&#x2F;localhost:8888&#x2F;</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6-jsp%EF%BC%9A%E5%9C%A8html%E4%B8%AD%E5%B5%8C%E5%A5%97%E7%9A%84Java%E4%BB%A3%E7%A0%81"><span class="toc-number">1.0.0.3.</span> <span class="toc-text">6.jsp：在html中嵌套的Java代码</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#7-JSP%E6%89%A7%E8%A1%8C%E6%B5%81%E7%A8%8B"><span class="toc-number">1.0.0.4.</span> <span class="toc-text">7.JSP执行流程:</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#8-Eclipse%E4%B8%AD%E7%9A%84Web%E9%A1%B9%E7%9B%AE%EF%BC%9A"><span class="toc-number">1.0.0.4.1.</span> <span class="toc-text">8.Eclipse中的Web项目：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#9-%E9%85%8D%E7%BD%AEtomcat%E8%BF%90%E8%A1%8C%E6%97%B6%E7%8E%AF%E5%A2%83"><span class="toc-number">1.0.0.4.2.</span> <span class="toc-text">9.配置tomcat运行时环境</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#10-%E7%BB%9F%E4%B8%80%E5%AD%97%E7%AC%A6%E9%9B%86%E7%BC%96%E7%A0%81"><span class="toc-number">1.0.0.4.3.</span> <span class="toc-text">10.统一字符集编码</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2022-3-6"><span class="toc-number">2.</span> <span class="toc-text">2022.3.6</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-%E9%83%A8%E7%BD%B2tomcat"><span class="toc-number">2.0.0.0.1.</span> <span class="toc-text">1.部署tomcat</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-JSP%E7%9A%84%E9%A1%B5%E9%9D%A2%E5%85%83%E7%B4%A0"><span class="toc-number">2.0.0.1.</span> <span class="toc-text">2.JSP的页面元素</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#a-%E8%84%9A%E6%9C%ACScriptlet"><span class="toc-number">2.0.0.1.1.</span> <span class="toc-text">a.脚本Scriptlet</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#b-%E6%8C%87%E4%BB%A4"><span class="toc-number">2.0.0.1.2.</span> <span class="toc-text">b.指令</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#c-%E6%B3%A8%E9%87%8A"><span class="toc-number">2.0.0.1.3.</span> <span class="toc-text">c.注释</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-JSP%E4%B9%9D%E5%A4%A7%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1%EF%BC%88%E8%87%AA%E5%B8%A6%E7%9A%84%EF%BC%8C%E4%B8%8D%E9%9C%80%E8%A6%81new-%E4%B9%9F%E5%8F%AF%E4%BB%A5%E4%BD%BF%E7%94%A8%E7%9A%84%E5%AF%B9%E8%B1%A1%EF%BC%8C%E6%9C%89%E4%B9%9D%E4%B8%AA%EF%BC%89"><span class="toc-number">2.0.0.2.</span> <span class="toc-text">3.JSP九大内置对象（自带的，不需要new 也可以使用的对象，有九个）</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#3-request-%E8%AF%B7%E6%B1%82%E5%AF%B9%E8%B1%A1-%EF%BC%9A%E5%AD%98%E5%82%A8%E2%80%9C%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%90%91%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%8F%91%E9%80%81%E7%9A%84%E4%BF%A1%E6%81%AF%E2%80%9D"><span class="toc-number">2.0.0.2.1.</span> <span class="toc-text">(3)request(请求对象)：存储“客户端向服务端发送的信息”</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%EF%BC%884%EF%BC%89response-%E5%93%8D%E5%BA%94%E5%AF%B9%E8%B1%A1-%EF%BC%88%E6%9C%8D%E5%8A%A1%E7%AB%AF%E7%BB%99%E5%AE%A2%E6%88%B7%E7%AB%AF%E7%9A%84%E5%9B%9E%E5%BA%94%EF%BC%89%EF%BC%9A"><span class="toc-number">2.0.0.2.2.</span> <span class="toc-text">（4）response(响应对象)（服务端给客户端的回应）：</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-%E7%BB%9F%E4%B8%80%E8%AF%B7%E6%B1%82%E7%9A%84%E7%BC%96%E7%A0%81-request"><span class="toc-number">2.0.0.3.</span> <span class="toc-text">4.统一请求的编码 request</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#get%E6%96%B9%E5%BC%8F%E8%AF%B7%E6%B1%82-%E5%A6%82%E6%9E%9C%E5%87%BA%E7%8E%B0%E4%B9%B1%E7%A0%81%EF%BC%8C%E8%A7%A3%E5%86%B3%E5%A6%82%E4%B8%8B%EF%BC%9A"><span class="toc-number">2.0.0.3.1.</span> <span class="toc-text">get方式请求  如果出现乱码，解决如下：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#post%E6%96%B9%E5%BC%8F%E8%AF%B7%E6%B1%82"><span class="toc-number">2.0.0.3.2.</span> <span class="toc-text">post方式请求</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2022-3-18%EF%BC%88HTML%E7%AC%94%E8%AE%B0%EF%BC%89"><span class="toc-number">3.</span> <span class="toc-text">2022.3.18（HTML笔记）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E8%B6%85%E9%93%BE%E6%8E%A5"><span class="toc-number">3.0.1.</span> <span class="toc-text">一、超链接</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-%E9%93%BE%E6%8E%A5-target-%E5%B1%9E%E6%80%A7"><span class="toc-number">3.0.1.0.1.</span> <span class="toc-text">1.链接 - target 属性</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-%E5%9C%A8-%E5%BD%93%E5%89%8D%E9%A1%B5%E9%9D%A2-%E9%93%BE%E6%8E%A5%E5%88%B0%E6%8C%87%E5%AE%9A%E7%9A%84%E4%BD%8D%E7%BD%AE%EF%BC%88%E7%82%B9%E5%87%BB-%E6%9F%A5%E7%9C%8B%E7%AB%A0%E8%8A%824-%E7%9B%B4%E6%8E%A5%E8%B7%B3%E5%88%B0-%E7%AB%A0%E8%8A%82%E5%9B%9B-%EF%BC%89"><span class="toc-number">3.0.1.0.2.</span> <span class="toc-text">2.在 当前页面 链接到指定的位置（点击   查看章节4    直接跳到 章节四 ）</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-%E5%9B%BE%E7%89%87%E9%93%BE%E6%8E%A5"><span class="toc-number">3.0.1.0.3.</span> <span class="toc-text">3.图片链接</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#4-%E8%B7%B3%E5%87%BA%E6%A1%86%E6%9E%B6%EF%BC%88%E9%93%BE%E6%8E%A5-target-%E5%B1%9E%E6%80%A7%EF%BC%89"><span class="toc-number">3.0.1.0.4.</span> <span class="toc-text">4.跳出框架（链接 - target 属性）</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#5-%E5%88%9B%E5%BB%BA%E7%94%B5%E5%AD%90%E9%82%AE%E4%BB%B6%E9%93%BE%E6%8E%A5"><span class="toc-number">3.0.1.0.5.</span> <span class="toc-text">5.创建电子邮件链接</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E5%9B%BE%E7%89%87"><span class="toc-number">3.0.2.</span> <span class="toc-text">二、图片</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-%E5%9B%BE%E5%83%8F-Alt%E5%B1%9E%E6%80%A7"><span class="toc-number">3.0.2.0.1.</span> <span class="toc-text">1.图像- Alt属性</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-%E6%B5%AE%E5%8A%A8%E5%9B%BE%E7%89%87%EF%BC%88%E4%BD%BF%E7%94%A8%E4%BA%86-CSS-float-%E5%B1%9E%E6%80%A7%EF%BC%89"><span class="toc-number">3.0.2.0.2.</span> <span class="toc-text">2.浮动图片（使用了 CSS float 属性）</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-%E5%9B%BE%E5%83%8F%E6%98%A0%E5%B0%84"><span class="toc-number">3.0.2.0.3.</span> <span class="toc-text">3.图像映射</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E7%BC%A9%E5%86%99"><span class="toc-number">3.0.3.</span> <span class="toc-text">三、缩写</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%9B-HTML-%E6%A0%B7%E5%BC%8F-CSS"><span class="toc-number">3.0.4.</span> <span class="toc-text">四.HTML 样式- CSS</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-%E4%BD%BF%E7%94%A8-style-%E5%B1%9E%E6%80%A7%E5%88%B6%E4%BD%9C%E4%B8%80%E4%B8%AA%E6%B2%A1%E6%9C%89%E4%B8%8B%E5%88%92%E7%BA%BF%E7%9A%84%E9%93%BE%E6%8E%A5%E3%80%82"><span class="toc-number">3.0.4.0.1.</span> <span class="toc-text">1.使用 style 属性制作一个没有下划线的链接。</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-%E5%86%85%E9%83%A8%E6%A0%B7%E5%BC%8F%E8%A1%A8-%E5%9C%A8HTML%E6%96%87%E6%A1%A3%E5%A4%B4%E9%83%A8-%E5%8C%BA%E5%9F%9F%E4%BD%BF%E7%94%A8-%E5%85%83%E7%B4%A0-%E6%9D%A5%E5%8C%85%E5%90%ABCSS"><span class="toc-number">3.0.4.0.2.</span> <span class="toc-text">2.内部样式表 -在HTML文档头部  区域使用 &lt;strong&gt;元素&lt;&#x2F;strong&gt; 来包含CSS&lt;&#x2F;h5&gt;&lt;figure class&#x3D;&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class&#x3D;&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class&#x3D;&quot;line&quot;&gt;1&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;2&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;3&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;4&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;5&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;6&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;7&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;8&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;9&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;10&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;11&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;12&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;13&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;14&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;15&lt;&#x2F;span&gt;&lt;br&gt;&lt;&#x2F;pre&gt;&lt;&#x2F;td&gt;&lt;td class&#x3D;&quot;code&quot;&gt;&lt;pre&gt;&lt;span class&#x3D;&quot;line&quot;&gt;&lt;head&gt;&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;&lt;meta charset&#x3D;&quot;utf-8&quot;&gt; &lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;&lt;title&gt;菜鸟教程(runoob.com)&lt;&#x2F;title&gt;&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;&lt;style type&#x3D;&quot;text&#x2F;css&quot;&gt;&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;h1 &amp;#123;color:red;&amp;#125;&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;p &amp;#123;color:blue;&amp;#125;&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;&lt;&#x2F;style&gt;&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;&lt;&#x2F;head&gt;&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;&lt;body&gt;&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;&lt;h1&gt;这是一个标题&lt;&#x2F;h1&gt;&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;&lt;p&gt;这是一个段落。&lt;&#x2F;p&gt;&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;&lt;&#x2F;body&gt;&lt;&#x2F;span&gt;&lt;br&gt;&lt;&#x2F;pre&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;&lt;&#x2F;table&gt;&lt;&#x2F;figure&gt;
-
-&lt;h5 id&#x3D;&quot;3-内联样式-在HTML元素中使用”style”-属性&quot;&gt;&lt;a href&#x3D;&quot;#3-内联样式-在HTML元素中使用”style”-属性&quot; class&#x3D;&quot;headerlink&quot; title&#x3D;&quot;3.内联样式-在HTML元素中使用”style” 属性&quot;&gt;&lt;&#x2F;a&gt;3.内联样式-在HTML元素中使用”style” 属性&lt;&#x2F;h5&gt;&lt;figure class&#x3D;&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class&#x3D;&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class&#x3D;&quot;line&quot;&gt;1&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;2&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;3&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;4&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;5&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;6&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;7&lt;&#x2F;span&gt;&lt;br&gt;&lt;&#x2F;pre&gt;&lt;&#x2F;td&gt;&lt;td class&#x3D;&quot;code&quot;&gt;&lt;pre&gt;&lt;span class&#x3D;&quot;line&quot;&gt;&lt;p style&#x3D;&quot;color:blue;margin-left:20px;&quot;&gt;这是一个段落。&lt;&#x2F;p&gt;  -----&gt;颜色，左外边距&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;style&#x3D;&quot;background-color:yellow;&quot; -----&gt;背景颜色&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;style&#x3D;&quot;font-family:verdana;&quot; -----&gt;字体&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;style&#x3D;&quot;font-size:20px;&quot; -----&gt;字体大小&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;style&#x3D;&quot;text-align:center;&quot; -----&gt;文字对齐(center,left,right)&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;&lt;&#x2F;span&gt;&lt;br&gt;&lt;&#x2F;pre&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;&lt;&#x2F;table&gt;&lt;&#x2F;figure&gt;
-
-&lt;h5 id&#x3D;&quot;4-外部引用-使用外部-CSS-文件（推荐）&quot;&gt;&lt;a href&#x3D;&quot;#4-外部引用-使用外部-CSS-文件（推荐）&quot; class&#x3D;&quot;headerlink&quot; title&#x3D;&quot;4.外部引用 - 使用外部 CSS 文件（推荐）&quot;&gt;&lt;&#x2F;a&gt;4.外部引用 - 使用外部 CSS 文件（推荐）&lt;&#x2F;h5&gt;&lt;figure class&#x3D;&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class&#x3D;&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class&#x3D;&quot;line&quot;&gt;1&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;2&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;3&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;4&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;5&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;6&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;7&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;8&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;9&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;10&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;11&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;12&lt;&#x2F;span&gt;&lt;br&gt;&lt;&#x2F;pre&gt;&lt;&#x2F;td&gt;&lt;td class&#x3D;&quot;code&quot;&gt;&lt;pre&gt;&lt;span class&#x3D;&quot;line&quot;&gt;&lt;head&gt;&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;&lt;link rel&#x3D;&quot;stylesheet&quot; type&#x3D;&quot;text&#x2F;css&quot; href&#x3D;&quot;mystyle.css&quot;&gt;&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;&lt;&#x2F;head&gt;&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;&lt;link&gt; 标签定义文档与外部资源的关系。&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;&lt;link&gt; 标签最常见的用途是链接样式表。&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;注意： link 元素是空元素，它仅包含属性。&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;注意： 此元素只能存在于 head 部分，不过它可出现任何次数。&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;&lt;style&gt; 标签定义 HTML 文档的样式信息。&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;在 &lt;style&gt; 元素中，您可以规定在浏览器中如何呈现 HTML 文档。&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;每个 HTML 文档能包含多个 &lt;style&gt; 标签。&lt;&#x2F;span&gt;&lt;br&gt;&lt;&#x2F;pre&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;&lt;&#x2F;table&gt;&lt;&#x2F;figure&gt;
-
-&lt;h3 id&#x3D;&quot;四-表格&quot;&gt;&lt;a href&#x3D;&quot;#四-表格&quot; class&#x3D;&quot;headerlink&quot; title&#x3D;&quot;四.表格&quot;&gt;&lt;&#x2F;a&gt;四.表格&lt;&#x2F;h3&gt;&lt;h5 id&#x3D;&quot;1-基本知识&quot;&gt;&lt;a href&#x3D;&quot;#1-基本知识&quot; class&#x3D;&quot;headerlink&quot; title&#x3D;&quot;1.基本知识&quot;&gt;&lt;&#x2F;a&gt;1.基本知识&lt;&#x2F;h5&gt;&lt;figure class&#x3D;&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class&#x3D;&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class&#x3D;&quot;line&quot;&gt;1&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;2&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;3&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;4&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;5&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;6&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;7&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;8&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;9&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;10&lt;&#x2F;span&gt;&lt;br&gt;&lt;&#x2F;pre&gt;&lt;&#x2F;td&gt;&lt;td class&#x3D;&quot;code&quot;&gt;&lt;pre&gt;&lt;span class&#x3D;&quot;line&quot;&gt;&lt;table&gt;		定义表格&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;&lt;th&gt;		定义表格的表头&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;&lt;tr&gt;		定义表格的行&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;&lt;td&gt;		定义表格单元&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;&lt;caption&gt;	定义表格标题	-----&gt;	&lt;caption&gt;Monthly savings&lt;&#x2F;caption&gt;&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;&lt;colgroup&gt;	定义表格列的组&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;&lt;col&gt;		定义用于表格列的属性&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;&lt;thead&gt;		定义表格的页眉&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;&lt;tbody&gt;		定义表格的主体&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;&lt;tfoot&gt;		定义表格的页脚&lt;&#x2F;span&gt;&lt;br&gt;&lt;&#x2F;pre&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;&lt;&#x2F;table&gt;&lt;&#x2F;figure&gt;
-
-&lt;figure class&#x3D;&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class&#x3D;&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class&#x3D;&quot;line&quot;&gt;1&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;2&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;3&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;4&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;5&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;6&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;7&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;8&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;9&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;10&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;11&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;12&lt;&#x2F;span&gt;&lt;br&gt;&lt;&#x2F;pre&gt;&lt;&#x2F;td&gt;&lt;td class&#x3D;&quot;code&quot;&gt;&lt;pre&gt;&lt;span class&#x3D;&quot;line&quot;&gt;HTML中的table可以大致分为三个部分：（thead, tbody, tfoot 相当于三间房子，每间房子都可以用来放东西。）&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt; thead ---------表格的页眉&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt; tbody ---------表格的主体&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt; tfoot ---------定义表格的页脚&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;&lt;tr&gt; &lt;&#x2F;tr&gt; 这个标签就是放在三间房子里面的东西，每一个 &lt;tr&gt; &lt;&#x2F;tr&gt; 就是表格一行。&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;表格的每一行被分为一个个单元格。&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;每一个单元格就是用来存放数据的，这个数据分为两种：一，数据的名称；二，数据本身。&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;用 &lt;th&gt;&lt;&#x2F;th&gt; 表示数据的名称(标题) ,&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;&lt;td&gt;&lt;&#x2F;td&gt;表示真正的数据内容。&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;&lt;&#x2F;span&gt;&lt;br&gt;&lt;&#x2F;pre&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;&lt;&#x2F;table&gt;&lt;&#x2F;figure&gt;
-
-&lt;p&gt;&lt;img src&#x3D;&quot;C:\Users\甜甜\AppData\Roaming\Typora\typora-user-images\image-20220318215321285.png&quot; alt&#x3D;&quot;image-20220318215321285&quot;&gt;&lt;&#x2F;p&gt;
-&lt;figure class&#x3D;&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class&#x3D;&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class&#x3D;&quot;line&quot;&gt;1&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;2&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;3&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;4&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;5&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;6&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;7&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;8&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;9&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;10&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;11&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;12&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;13&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;14&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;15&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;16&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;17&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;18&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;19&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;20&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;21&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;22&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;23&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;24&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;25&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;26&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;27&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;28&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;29&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;30&lt;&#x2F;span&gt;&lt;br&gt;&lt;&#x2F;pre&gt;&lt;&#x2F;td&gt;&lt;td class&#x3D;&quot;code&quot;&gt;&lt;pre&gt;&lt;span class&#x3D;&quot;line&quot;&gt;表格三要素 table、tr、td 缺一不可。&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;&lt;table&gt; 标签常用属性：&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;border&#x3D;&quot;1&quot;   表格边框的宽度&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;bordercolor&#x3D;&quot;#fff&quot;   表格边框的颜色&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;cellspacing&#x3D;&quot;5&quot;   单元格之间的间距&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;cellpadding&#x3D;&quot;10&quot;  单元格边距&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;width&#x3D;&quot;500&quot;   表格的总宽度&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;height&#x3D;&quot;100&quot;   表格的总高度&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;align&#x3D;&quot;right&quot;   表格整体对齐方式    (参数有  left、center、right)&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;bgcolor&#x3D;&quot;#fff&quot;   表格整体的背景色&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;&lt;tr&gt; 标签的常用属性:&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;bgcolor&#x3D;&quot;#fff&quot;    行的颜色&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;align&#x3D;&quot;right&quot;    行内文字的水平对齐方式    (参数有left、center、right)&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;valign&#x3D;&quot;top&quot;     行内文字的垂直对齐方式    (参数有top、middle、bottom)&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;&lt;td&gt;、&lt;th&gt; 标签的常用属性:&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;width&#x3D;&quot;500&quot;    单元格的宽度，设置后对当前一列的单元格都有影响&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;height&#x3D;&quot;100&quot;   单元格的高度，设置后对当前一行的单元格都有影响&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;bgcolor&#x3D;&quot;fff&quot;  单元格的背景色&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;align&#x3D;&quot;right&quot;  单元格文字的水平对齐方式    (参数left、center、right)&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;rowspan&#x3D;&quot;3&quot;    合并垂直水平方向的单元格&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;colspan&#x3D;&quot;3&quot;    合并水平方向单元格&lt;&#x2F;span&gt;&lt;br&gt;&lt;span class&#x3D;&quot;line&quot;&gt;valign&#x3D;&quot;top&quot;   单元格文字的垂直对齐方式    (参数middle、bottom、top) &lt;&#x2F;span&gt;&lt;br&gt;&lt;&#x2F;pre&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;&lt;&#x2F;table&gt;&lt;&#x2F;figure&gt;
-
-</span></a></li></ol></li></ol></li></ol></li></ol></li></ol>
-                    </div>
-                </span>
-            </div>
-        </div>
-        
-    </div>
-</aside>
-
-
-
-  
-  
+    </div></section>
   
 
-  
-
-  
-
+    
+    <nav id="page-nav">
+      <a class="extend prev" rel="prev" href="/archives/2022/">&amp;laquo; Prev</a><a class="page-number" href="/archives/2022/">1</a><span class="page-number current">2</span>
+    </nav>
   
 
 
@@ -570,8 +222,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
-		isArchive: false,
+		isPost: false,
+		isArchive: true,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
