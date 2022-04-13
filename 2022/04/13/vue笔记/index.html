@@ -8,17 +8,17 @@
   <link rel="dns-prefetch" href="http://liutao127.github.io">
   <title>vue笔记 | lt_haha</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1.什么是MVVM？Model ViewModel View           连接桥梁 View层:​        视图层​        在我们前端开发中，通常就是DOM层。​        主要的作用是给用户展示各种信息。 Model层:​        数据层​        数据可能是我们固定的死数据，更多的是来自我们服务器，从网络上请求下来的数据。​        在我们计数器">
+  <meta name="description" content="1.什么是MVVM？">
 <meta property="og:type" content="article">
 <meta property="og:title" content="vue笔记">
 <meta property="og:url" content="http://liutao127.github.io/2022/04/13/vue%E7%AC%94%E8%AE%B0/index.html">
 <meta property="og:site_name" content="lt_haha">
-<meta property="og:description" content="1.什么是MVVM？Model ViewModel View           连接桥梁 View层:​        视图层​        在我们前端开发中，通常就是DOM层。​        主要的作用是给用户展示各种信息。 Model层:​        数据层​        数据可能是我们固定的死数据，更多的是来自我们服务器，从网络上请求下来的数据。​        在我们计数器">
+<meta property="og:description" content="1.什么是MVVM？">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://liutao127.github.io/2022/04/13/vue%E7%AC%94%E8%AE%B0/vue2%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F.png">
 <meta property="og:image" content="http://liutao127.github.io/2022/04/13/vue%E7%AC%94%E8%AE%B0/vue3%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F.png">
 <meta property="article:published_time" content="2022-04-13T13:03:29.000Z">
-<meta property="article:modified_time" content="2022-04-13T14:12:07.858Z">
+<meta property="article:modified_time" content="2022-04-13T14:39:51.573Z">
 <meta property="article:author" content="coderLT">
 <meta property="article:tag" content="vue">
 <meta name="twitter:card" content="summary">
@@ -186,9 +186,9 @@
 </p></center>
 	
       
-        <span id="more"></span>
+        <h1 id="1-什么是MVVM？"><a href="#1-什么是MVVM？" class="headerlink" title="1.什么是MVVM？"></a>1.什么是MVVM？</h1><span id="more"></span>
 
-<h1 id="1-什么是MVVM？"><a href="#1-什么是MVVM？" class="headerlink" title="1.什么是MVVM？"></a>1.什么是MVVM？</h1><p>Model ViewModel View<br>           连接桥梁</p>
+<p>Model ViewModel View<br>           连接桥梁</p>
 <h2 id="View层"><a href="#View层" class="headerlink" title="View层:"></a>View层:</h2><p>​        视图层<br>​        在我们前端开发中，通常就是DOM层。<br>​        主要的作用是给用户展示各种信息。</p>
 <h2 id="Model层"><a href="#Model层" class="headerlink" title="Model层:"></a>Model层:</h2><p>​        数据层<br>​        数据可能是我们固定的死数据，更多的是来自我们服务器，从网络上请求下来的数据。<br>​        在我们计数器的案例中，就是后面抽取出来的obj，当然，里面的数据可能没有这么简单。</p>
 <h2 id="VueModel层"><a href="#VueModel层" class="headerlink" title="VueModel层:"></a>VueModel层:</h2><p>​        视图模型层<br>​        视图模型层是View和Model沟通的桥梁。<br>​        一方面它实现了Data Binding，也就是数据绑定，将Model的改变实时的反应到view中<br>​        另一方面它实现了DOM Listener，也就是DOM监听，当DOM发生一些事件(点击、滚动、touch等)时，<br>​        可以监听到，并在需要的情况下改变对应的Data。</p>
