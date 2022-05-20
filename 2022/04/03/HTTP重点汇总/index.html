@@ -35,7 +35,7 @@
 <meta property="og:image" content="http://liutao127.github.io/2022/04/03/HTTP%E9%87%8D%E7%82%B9%E6%B1%87%E6%80%BB/29-3.jpg">
 <meta property="og:image" content="http://liutao127.github.io/2022/04/03/HTTP%E9%87%8D%E7%82%B9%E6%B1%87%E6%80%BB/29-4.png">
 <meta property="article:published_time" content="2022-04-03T03:10:08.000Z">
-<meta property="article:modified_time" content="2022-05-14T10:07:13.988Z">
+<meta property="article:modified_time" content="2022-05-20T11:00:02.158Z">
 <meta property="article:author" content="coderLT">
 <meta property="article:tag" content="HTTP">
 <meta name="twitter:card" content="summary">
@@ -875,6 +875,7 @@
 <li>客户端收到发送：ACK=1，确认号=w+1,seq = x+1 </li>
 </ol>
 <p>在这个过程中，显然第二步和第三步可以合并，不需要单独发送一个 SYN</p>
+<p>TCP协议是一种面向连接的、可靠的、基于字节流的运输层通信协议。TCP是全双工模式，这就意味着，当主机1发出<code>FIN</code>报文段时，只是表示主机1已经没有数据要发送了，主机1告诉主机2，它的数据已经全部发送完毕了；但是，这个时候主机1还是可以接受来自主机2的数据；当主机2返回<code>ACK</code>报文段时，表示它已经知道主机1没有数据发送了，但是主机2还是可以发送数据到主机1的；当主机2也发送了<code>FIN</code>报文段时，这个时候就表示主机2也没有数据要发送了，就会告诉主机1，我也没有数据要发送了，之后彼此就会愉快的中断这次TCP连接。如果要正确的理解四次分手的原理，就需要了解四次分手过程中的状态变化。</p>
 <h2 id="四次挥手"><a href="#四次挥手" class="headerlink" title="四次挥手"></a>四次挥手</h2><img src="/2022/04/03/HTTP%E9%87%8D%E7%82%B9%E6%B1%87%E6%80%BB/10.png" class>
 
 <p>既然握手的时候，服务端发送的两个请求可以合并，那么<strong>释放连接的时候，是否也能合并，只需三次挥手呢</strong>？</p>
@@ -917,7 +918,7 @@
 <p>区别：<br>(1) cookie数据始终在同源的http请求中携带（即使不需要），即cookie在浏览器和服务器间来回传递<br> sessionStorage和localStorage不会自动把数据发给服务器，仅在本地保存</p>
 <p>(2) 存储大小限制也不同<br> cookie数据不能超过4k<br> sessionStorage和localStorage 虽然也有存储大小的限制，但比cookie大得多，可以达到5M或更大（实际上指键值与键共10M）</p>
 <p>(3) 数据有效期不同<br> sessionStorage：仅在当前浏览器窗口关闭前有效，自然也就不可能持久保持；<br> localStorage：始终有效，窗口或浏览器关闭也一直保存，因此用作持久数据；<br> cookie只在设置的cookie过期时间之前一直有效，即使窗口或浏览器关闭;</p>
-<p>(4) 作用域不同<br> sessionStorage不在不同的浏览器窗口***享，即使是同一个页面；<br> localStorage 在所有同源窗口中都是共享的；<br> cookie也是在所有同源窗口中都是共享的</p>
+<p>(4) 作用域不同<br> sessionStorage在不同的浏览器窗口不共享，即使是同一个页面；<br> localStorage 在所有同源窗口中都是共享的；<br> cookie也是在所有同源窗口中都是共享的</p>
 <h1 id="15-Etag-是怎么计算的，怎么传递的"><a href="#15-Etag-是怎么计算的，怎么传递的" class="headerlink" title="15. Etag 是怎么计算的，怎么传递的"></a>15. Etag 是怎么计算的，怎么传递的</h1><p>使用 hash <a target="_blank" rel="noopener" href="https://www.nowcoder.com/jump/super-jump/word?word=%E7%AE%97%E6%B3%95">算法</a>进行编码，在响应头部里面的 Etag 字段进行传递</p>
 <h2 id="ETag简介"><a href="#ETag简介" class="headerlink" title="ETag简介"></a><strong>ETag简介</strong></h2><p>ETag是URL的tag，用来标示URL对象是否改变。这样可以应用于客户端的缓存：服务器产生ETag，并在HTTP响应头中将其传送到客户端，服务器用它来判断页面是否被修改过，如果未修改返回304，无需传输整个对象。</p>
 <h1 id="16-扫码登录如何实现"><a href="#16-扫码登录如何实现" class="headerlink" title="16. 扫码登录如何实现"></a>16. 扫码登录如何实现</h1><p>扫码登陆要求已经用户在手机端登录</p>
@@ -1458,15 +1459,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">HTTP</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">TS</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">github</a>
+                <a href="javascript:void(0)" class="js-tag color4">vue</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">HTTP</a>
+                <a href="javascript:void(0)" class="js-tag color2">github</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1478,11 +1483,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">vue</a>
+                <a href="javascript:void(0)" class="js-tag color3">webpack</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">webpack</a>
+                <a href="javascript:void(0)" class="js-tag color4">Vue</a>
               </li>
             
             <div class="clearfix"></div>
