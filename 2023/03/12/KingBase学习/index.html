@@ -6,14 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://liutao127.github.io">
-  <title>Archives: 2022/9 | lt_haha</title>
+  <title>KingBase学习 | lt_haha</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="lt_haha">
-<meta property="og:url" content="http://liutao127.github.io/archives/2022/09/index.html">
+  <meta name="description" content="1. 单表查询">
+<meta property="og:type" content="article">
+<meta property="og:title" content="KingBase学习">
+<meta property="og:url" content="http://liutao127.github.io/2023/03/12/KingBase%E5%AD%A6%E4%B9%A0/index.html">
 <meta property="og:site_name" content="lt_haha">
+<meta property="og:description" content="1. 单表查询">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-03-12T07:29:20.000Z">
+<meta property="article:modified_time" content="2023-03-12T09:34:34.979Z">
 <meta property="article:author" content="coderLT">
+<meta property="article:tag" content="KingBase">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="lt_haha" type="application/atom+xml">
@@ -154,60 +159,344 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-KingBase学习" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2022" class="archive-year">2022</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2022/09/18/%E5%B0%9A%E5%93%81%E6%B1%87-%E7%94%B5%E5%95%86%E8%B4%AD%E7%89%A9-%E7%AC%94%E8%AE%B0/" class="archive-article-date">
-  	<time datetime="2022-09-18T05:56:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-09-18</time>
+      <header class="article-header">
+        
+        
+        <a href="/2023/03/12/KingBase%E5%AD%A6%E4%B9%A0/" class="archive-article-date">
+  	<time datetime="2023-03-12T07:29:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-03-12</time>
 </a>
-        </div>
-    	 
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+	
+	
+	<center><p>
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/09/18/%E5%B0%9A%E5%93%81%E6%B1%87-%E7%94%B5%E5%95%86%E8%B4%AD%E7%89%A9-%E7%AC%94%E8%AE%B0/">尚品汇-电商购物-笔记</a>
+    <h1 class="article-title_code_ant" itemprop="name">
+      KingBase学习
     </h1>
   
+</p></center>
+	
+      
+        <h1 id="1-单表查询"><a href="#1-单表查询" class="headerlink" title="1. 单表查询"></a>1. 单表查询</h1><span id="more"></span>
 
-        <div class="article-info info-on-right">
-          
+<h2 id="1-DQL语言的语法"><a href="#1-DQL语言的语法" class="headerlink" title="1. DQL语言的语法"></a>1. DQL语言的语法</h2><table>
+<thead>
+<tr>
+<th>参数</th>
+<th>简介</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>SELECT</td>
+<td>主动作关键字，可以对表执行投影和送择操作。</td>
+</tr>
+<tr>
+<td>DISTINCT</td>
+<td>用于对结果集去掉重复记录。</td>
+</tr>
+<tr>
+<td>*</td>
+<td>代表查询表中的所有列。</td>
+</tr>
+<tr>
+<td>WHERE</td>
+<td>指定查询条件，只返回条件为 true的记录。<br>条件表达式用于各种数据类型的字段值的相关比较。<br>常用的条什表达式操作符有&gt;、&lt;、&gt;-、&lt;-、&lt;&gt;(!-)、BETWEEN AND、IN、EXISTS、LIKE、ISNULL。<br>逻辑表达式用于结合或者限制一个或多个条件表达式。<br>常用的逻辑表达式操作符有NOT、AND、OR。</td>
+</tr>
+<tr>
+<td>GROUP BY</td>
+<td>用于对满足条件的记录按指定列执行分组聚合运算。</td>
+</tr>
+<tr>
+<td>HAVING</td>
+<td>用于对分组聚合后的结果集进行筛选，只返回条件为true的记录。</td>
+</tr>
+<tr>
+<td>ORDER BY</td>
+<td>用于对结果集进行排序。<br>支持升序(ASC)、降序(DESC)、多列组合排序。</td>
+</tr>
+<tr>
+<td>LIMIT</td>
+<td>用于返回结果集的前N行（TOP N查询）。</td>
+</tr>
+<tr>
+<td>OFFSET..FETCH</td>
+<td>用于分页查询。</td>
+</tr>
+<tr>
+<td>FOR</td>
+<td>用于独占方式查询表。</td>
+</tr>
+</tbody></table>
+<h2 id="2-SELECT子句"><a href="#2-SELECT子句" class="headerlink" title="2. SELECT子句"></a>2. SELECT子句</h2><h3 id="1-查询所有行和所有列"><a href="#1-查询所有行和所有列" class="headerlink" title="1. 查询所有行和所有列"></a>1. 查询所有行和所有列</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select * from exam.course;</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-查询部分列"><a href="#2-查询部分列" class="headerlink" title="2. 查询部分列"></a>2. 查询部分列</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select son AS &quot;学员编号&quot;,sname AS &quot;学员姓名&quot; from exam.student;</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-单引号和双引号"><a href="#3-单引号和双引号" class="headerlink" title="3. 单引号和双引号"></a>3. 单引号和双引号</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"># 1、例如，针对有空格或者特殊字符或者以数字开头的字段别名必须加双引号。</span><br><span class="line"># dual 是 kingbase 数据库中的虚拟表</span><br><span class="line">select 1+1 as &quot;1+1=?&quot; from dual;</span><br><span class="line"># 结果</span><br><span class="line"># 1+1=?</span><br><span class="line"># -----------</span><br><span class="line"># 2</span><br><span class="line"># (1 row)</span><br><span class="line"></span><br><span class="line"># 2、例如，针对标量字符串表达式必须用加单引号。</span><br><span class="line">select &#x27;hello,Kingbase!&#x27; as Hello from dual;</span><br><span class="line"># 结果</span><br><span class="line"># Hello</span><br><span class="line"># ------------</span><br><span class="line"># Hello,Kingbase!</span><br><span class="line"># (1 row)</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-连接运算"><a href="#4-连接运算" class="headerlink" title="4. 连接运算"></a>4. 连接运算</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"># 1、字符串的拼接运算。</span><br><span class="line"># 比如，将多列拼接成一个长的字符串、将字符串与列拼接成一个长的字符串。</span><br><span class="line">select iname||&#x27;的职称是&#x27;||title AS &#x27;讲师信息&#x27; from exam.instructor;</span><br><span class="line"># 结果</span><br><span class="line"># 讲师信息</span><br><span class="line"># ------------------------</span><br><span class="line"># Li Nan的职称是Senior Instuctor</span><br><span class="line"># Zhang San的职称是Intermediate Instructor</span><br><span class="line"># Ma Tao的职称是Intermediate Instructor</span><br><span class="line"># (7 orws)</span><br><span class="line"></span><br><span class="line"># 2、字符串拼接经常用于生成SQL脚本。</span><br><span class="line"># 比如，要删除exam模式下的所有表,可以通过拼接生成如下批量的sql。</span><br><span class="line">select &#x27;DROP TABLE &#x27;||schemaname||&#x27;.&#x27;||tablename||&#x27;;&#x27; AS &#x27;batch_sql&#x27; from sys_tables where schemaname=&#x27; exam&#x27;;</span><br><span class="line"># 结果</span><br><span class="line"># batch_sql</span><br><span class="line"># ----------------------</span><br><span class="line"># DROP TABLE exam.instructor_history;</span><br><span class="line"># DROP TABLE exam.course;</span><br><span class="line"># DROP TABLE exam.score;</span><br><span class="line"># DROP TABLE exam.student;</span><br><span class="line"># (5 rows)</span><br></pre></td></tr></table></figure>
+
+<h3 id="5-算术运算符"><a href="#5-算术运算符" class="headerlink" title="5. 算术运算符"></a>5. 算术运算符</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"># 1、数值的算术运算</span><br><span class="line">select sno,score,score+1 AS new_score from exam.score;</span><br><span class="line"># 结果</span><br><span class="line"># sno  |  score  |  new_score</span><br><span class="line"># ----------------------------------</span><br><span class="line"># 1001 |   85    |    86</span><br><span class="line"># 1001 |   88    |    89</span><br><span class="line"># 1001 |   83    |    84</span><br><span class="line"># 1002 |   94    |    95</span><br><span class="line"># 1002 |   86    |    87</span><br><span class="line"># 1002 |   97    |    98</span><br><span class="line"># (15 rows)</span><br><span class="line"></span><br><span class="line"># 2、日期的算术运算</span><br><span class="line">select current_date()+7 AS nextweek from dual;</span><br><span class="line"># 结果</span><br><span class="line"># nextweek</span><br><span class="line"># -------------</span><br><span class="line"># 2021-11-19</span><br><span class="line"># (1 row)</span><br></pre></td></tr></table></figure>
+
+<h3 id="6-使用条件表达式"><a href="#6-使用条件表达式" class="headerlink" title="6. 使用条件表达式"></a>6. 使用条件表达式</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"># 比如，输出成绩信息，成绩大于等于90时输出“高”，成绩大于等于70并且小于90时输出“中”，其它的输出“低”，可以使用条件表达式case when来实现。</span><br><span class="line">select sno,cno,score,case when score&gt;=90 then &#x27;高&#x27; when score&lt;90 and score &gt;= 70 then &#x27;中&#x27; else &#x27;低&#x27; END AS score_level from exam.score;</span><br><span class="line"># 结果</span><br><span class="line"># sno  |  cno  |  score  |  score_level</span><br><span class="line"># -----------------------------------------</span><br><span class="line"># 1001 |   10  |   85    |  中</span><br><span class="line"># 1001 |   20  |   88    |  中</span><br><span class="line"># 1001 |   30  |   83    |  中</span><br><span class="line"># 1002 |   10  |   95    |  高</span><br><span class="line"># 1002 |   20  |   86    |  中</span><br><span class="line"># 1002 |   30  |   68    |  低</span><br><span class="line"># (15 rows)</span><br></pre></td></tr></table></figure>
+
+<h2 id="3-WHERE子句"><a href="#3-WHERE子句" class="headerlink" title="3. WHERE子句"></a>3. WHERE子句</h2><h3 id="1-等值查询"><a href="#1-等值查询" class="headerlink" title="1. 等值查询"></a>1. 等值查询</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"># 1、数值型字段条件匹配。</span><br><span class="line"># 比如，查找分数大于80学员信息。</span><br><span class="line">select sno,cno,score from exam.score where score&gt;80;</span><br><span class="line"></span><br><span class="line"># 2、字符型字段条件匹配（等值匹配）。</span><br><span class="line"># 比如，要想查看学员所在城市为Beijing的学员。</span><br><span class="line">select sno,sname,city from exam.student where city=&#x27;Beijing&#x27;;</span><br><span class="line"></span><br><span class="line"># 3、字符型字段条件匹配(列表匹配）。</span><br><span class="line"># 比如，要想查看学员所在城市为Beijing或者Chongqing 的学员。</span><br><span class="line">select sno,sname,city from exam.student where city in(&#x27;Beijing&#x27;,&#x27;Chongqing&#x27;);</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-多条件匹配"><a href="#2-多条件匹配" class="headerlink" title="2. 多条件匹配"></a>2. 多条件匹配</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 比如，查找所在城市为为Beijing，工作岗位是Database Engineer的学员信息。</span><br><span class="line">select sno,sname,city,job from exam.student where city=&#x27;Beijing&#x27; and job=&#x27;Database Engineer&#x27;;</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-逻辑运算"><a href="#3-逻辑运算" class="headerlink" title="3. 逻辑运算"></a>3. 逻辑运算</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"># 逻辑运算包含与、或、非，分别使用逻辑运算符AND、OR、NOT表示。</span><br><span class="line"># 1、逻辑运算符的优化级为NOT&gt;AND&gt;OR。</span><br><span class="line"># (1）证明AND优先级高于OR的优先级。</span><br><span class="line">select 1 from dual where 1=1 OR 1=0 AND 1=0;</span><br><span class="line"># 结果:  1 (1 row)</span><br><span class="line"># 说明 where 条件为 true , 那么说明优先进行了AND运算, 即 AND &gt; OR</span><br><span class="line"></span><br><span class="line"># (2）证明NOT优先级高于AND优先级。</span><br><span class="line">select 1 from dual where NOT 1=0 AND 1=0;</span><br><span class="line"># 结果:  (0 row)</span><br><span class="line"># 说明 where 条件为 false , 那么说明优先进行了NOT运算, 即 NOT &gt; AND</span><br><span class="line"></span><br><span class="line">#2、可以使用括号改变优先级。</span><br><span class="line"># 以下两条语句输出结果不同，说明小括号提升了OR的优先级。</span><br><span class="line">select 1 from dual where 0=9 AND (0=1 OR 1=1);</span><br><span class="line"># 结果: (0 row)</span><br><span class="line">select 1 from dual where 0=9 AND 0=1 OR 1=1;</span><br><span class="line"># 结果 1 (1 row)</span><br><span class="line"></span><br><span class="line"># 结论: NOT &gt; AND &gt; OR</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-模糊查询"><a href="#4-模糊查询" class="headerlink" title="4. 模糊查询"></a>4. 模糊查询</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"># 在查询条件中无法确认完整的条件值时，可以使用模糊查询。模糊查询操作符为like,在匹配值域中可使用通配符%和_，其中“%”代表匹配任意个字符，“_”代表匹配一个字符。</span><br><span class="line"># 1、查询姓名以S字符打头的学员信息。</span><br><span class="line">select sno,sname,city from exam.student where sname like &#x27;S%&#x27;;</span><br><span class="line"></span><br><span class="line"># 2、查询姓名以g字符结尾的学员信息。</span><br><span class="line">select sno,sname,city from exam.student where sname like &#x27;%g&#x27;;</span><br><span class="line"></span><br><span class="line"># 3、查找姓名中第二个字符必须为i的学员信息。</span><br><span class="line">select sno,sname,city from exam.student where sname like &#x27;_i%&#x27;;</span><br></pre></td></tr></table></figure>
+
+<h3 id="5-范围查询"><a href="#5-范围查询" class="headerlink" title="5. 范围查询"></a>5. 范围查询</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 比如，查找在2021年7月1日到9月1日参与培训的学员信息。</span><br><span class="line">select sno,sname,reg_date from exam.student where reg_date BETWEEN &#x27;2021-07-01&#x27; AND &#x27;2021-09-01&#x27;;</span><br></pre></td></tr></table></figure>
+
+<h3 id="6-空值查询"><a href="#6-空值查询" class="headerlink" title="6. 空值查询"></a>6. 空值查询</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"># 比如，查找工作单位为空的学员信息。</span><br><span class="line">select sno,sname,company from exam.student where company IS null;</span><br><span class="line"># 结果</span><br><span class="line"># sno  |  sname    | company</span><br><span class="line"># ------------------------------</span><br><span class="line"># 1007 |  Fen Xiao |  (这里的结果就是空的!啥都没)</span><br><span class="line"># (1 row)   </span><br></pre></td></tr></table></figure>
+
+<h2 id="4-ORDER-BY-子句"><a href="#4-ORDER-BY-子句" class="headerlink" title="4. ORDER BY 子句"></a>4. ORDER BY 子句</h2><h3 id="1-升序排列-ASC"><a href="#1-升序排列-ASC" class="headerlink" title="1. 升序排列 ASC"></a>1. 升序排列 ASC</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># 比如，按注册日期升序排列。</span><br><span class="line"># 1、缺省时,ASC为默认选项。</span><br><span class="line">select sno,sname,reg_date from exam.student ORDER BY reg_date;</span><br><span class="line"># 结果是通过 reg_date 进行升序排列的;</span><br><span class="line"></span><br><span class="line"># 2、使用 ASC 关键字。</span><br><span class="line">select sno,sname,reg_date from exam.student ORDER BY reg_date ASC;</span><br><span class="line"># 结果是通过 reg_date 进行升序排列的;</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-降序排列-DESC"><a href="#2-降序排列-DESC" class="headerlink" title="2. 降序排列 DESC"></a>2. 降序排列 DESC</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 比如，按注册日期降序排列。</span><br><span class="line">select sno,sname,reg_date from exam.student ORDER BY reg_date DESC;</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-引用字段别名排序"><a href="#3-引用字段别名排序" class="headerlink" title="3. 引用字段别名排序"></a>3. 引用字段别名排序</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># 比如，按照姓名排序。</span><br><span class="line">select sname AS name,gender,phone from exam.student ORDER BY name;</span><br><span class="line"># 这里的排序字段是按照sname的别名(AS) --&gt; name;</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-引用字段顺序号排序"><a href="#4-引用字段顺序号排序" class="headerlink" title="4. 引用字段顺序号排序"></a>4. 引用字段顺序号排序</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># 比如，按注册日期升序排列。</span><br><span class="line">select sno,sname,reg_date from exam.student ORDER BY 3;</span><br><span class="line"># 这里的 ORDER BY 3, 意思是按照第三列(reg_date)来排序的;</span><br></pre></td></tr></table></figure>
+
+<h3 id="5-多列组合排序"><a href="#5-多列组合排序" class="headerlink" title="5. 多列组合排序"></a>5. 多列组合排序</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 比如，先按所在城市升序排列，同一个城市中再按注册日期降序排列。</span><br><span class="line">select sno,sname,reg_date,city from exam.student ORDER BY city, reg_date DESC;</span><br></pre></td></tr></table></figure>
+
+<h2 id="5-限制返回的行数"><a href="#5-限制返回的行数" class="headerlink" title="5. 限制返回的行数"></a>5. 限制返回的行数</h2><h3 id="1-限制返回的行数"><a href="#1-限制返回的行数" class="headerlink" title="1. 限制返回的行数"></a>1. 限制返回的行数</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># 1、使用limit子句。</span><br><span class="line">select sno,sname,city from exam.student LIMIT 3;</span><br><span class="line"># 2、使用子查询。</span><br><span class="line">select * from (select rownum rn,sno,sname,city from exam.student) where rn&lt;=3;</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-分页查询"><a href="#2-分页查询" class="headerlink" title="2. 分页查询"></a>2. 分页查询</h3><p><strong>作用:在一些应用窗口中执行数据检索遇到返回结果集有较多记录时，往往需要利用SQL分布询显示部分记录，以提升数据检索的响应速度和减少网络传输压力，可使用offset fetch来实现。</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select sno,sname,city from exam.student OFFSET 3 ROWS FETCH NEXT 3 ROWS ONLY;</span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th>关键字</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>offset</td>
+<td>表示排除结果集前面的N行记录, 即从 N+1 行开始返回</td>
+</tr>
+<tr>
+<td>fetch</td>
+<td>表示从 N+1 行开始总共要返回的记录数</td>
+</tr>
+<tr>
+<td>next / first</td>
+<td>没有实际差异, 都表示返回的行数</td>
+</tr>
+<tr>
+<td>row / rows</td>
+<td>没有实际差异, 为了构建更清晰的语法而已</td>
+</tr>
+</tbody></table>
+<h3 id="3-DISTINCT-关键字"><a href="#3-DISTINCT-关键字" class="headerlink" title="3. DISTINCT 关键字"></a>3. DISTINCT 关键字</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># 1、查看student表中的城市的数量（含重复值）。</span><br><span class="line">SELECT count(city)FROM student;</span><br><span class="line"># 2、查看student表中的城市的数量（去掉重复值)。</span><br><span class="line">select count(DISTINCT city) from student;</span><br></pre></td></tr></table></figure>
+
+<h1 id="2-多表查询"><a href="#2-多表查询" class="headerlink" title="2. 多表查询"></a>2. 多表查询</h1>
+      
+	  
+	  
+	  
+	  
+		
+		
+		  <div>
+			<blockquote>
+				<strong>本文作者：</strong>
+				
+				  coderLT
+				
+				<br>
+				<strong>本文链接：</strong>
+				http://liutao127.github.io/2023/03/12/KingBase%E5%AD%A6%E4%B9%A0/
+				<br>
+				<strong>版权声明：</strong>
+				本作品采用
+				<a rel="license noopener" target="_blank" href="https://www.baidu.com">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>
+				进行许可。转载请注明出处！
+				
+				  <br>
+				  <a rel="license noopener" target="_blank" href="https://www.baidu.com"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png"/></a>
+				
+			</blockquote>
+			
+			
+			<hr>
+				<center><strong>感谢有你，伴我成长。</strong></center>
+			<hr>
+		  </div>
+		
+		
+		
+	  
+	  
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/img/alipay.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/img/wechat.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">vue2项目笔记</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">KingBase</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://liutao127.github.io/2023/03/12/KingBase%E5%AD%A6%E4%B9%A0/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2023/01/04/MySQL%E5%AD%A6%E4%B9%A0/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">MySQL学习</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-%E5%8D%95%E8%A1%A8%E6%9F%A5%E8%AF%A2"><span class="toc-number">1.</span> <span class="toc-text">1. 单表查询</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-DQL%E8%AF%AD%E8%A8%80%E7%9A%84%E8%AF%AD%E6%B3%95"><span class="toc-number">1.1.</span> <span class="toc-text">1. DQL语言的语法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-SELECT%E5%AD%90%E5%8F%A5"><span class="toc-number">1.2.</span> <span class="toc-text">2. SELECT子句</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E6%9F%A5%E8%AF%A2%E6%89%80%E6%9C%89%E8%A1%8C%E5%92%8C%E6%89%80%E6%9C%89%E5%88%97"><span class="toc-number">1.2.1.</span> <span class="toc-text">1. 查询所有行和所有列</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E6%9F%A5%E8%AF%A2%E9%83%A8%E5%88%86%E5%88%97"><span class="toc-number">1.2.2.</span> <span class="toc-text">2. 查询部分列</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E5%8D%95%E5%BC%95%E5%8F%B7%E5%92%8C%E5%8F%8C%E5%BC%95%E5%8F%B7"><span class="toc-number">1.2.3.</span> <span class="toc-text">3. 单引号和双引号</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E8%BF%9E%E6%8E%A5%E8%BF%90%E7%AE%97"><span class="toc-number">1.2.4.</span> <span class="toc-text">4. 连接运算</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E7%AE%97%E6%9C%AF%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number">1.2.5.</span> <span class="toc-text">5. 算术运算符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-%E4%BD%BF%E7%94%A8%E6%9D%A1%E4%BB%B6%E8%A1%A8%E8%BE%BE%E5%BC%8F"><span class="toc-number">1.2.6.</span> <span class="toc-text">6. 使用条件表达式</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-WHERE%E5%AD%90%E5%8F%A5"><span class="toc-number">1.3.</span> <span class="toc-text">3. WHERE子句</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E7%AD%89%E5%80%BC%E6%9F%A5%E8%AF%A2"><span class="toc-number">1.3.1.</span> <span class="toc-text">1. 等值查询</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E5%A4%9A%E6%9D%A1%E4%BB%B6%E5%8C%B9%E9%85%8D"><span class="toc-number">1.3.2.</span> <span class="toc-text">2. 多条件匹配</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97"><span class="toc-number">1.3.3.</span> <span class="toc-text">3. 逻辑运算</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E6%A8%A1%E7%B3%8A%E6%9F%A5%E8%AF%A2"><span class="toc-number">1.3.4.</span> <span class="toc-text">4. 模糊查询</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E8%8C%83%E5%9B%B4%E6%9F%A5%E8%AF%A2"><span class="toc-number">1.3.5.</span> <span class="toc-text">5. 范围查询</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-%E7%A9%BA%E5%80%BC%E6%9F%A5%E8%AF%A2"><span class="toc-number">1.3.6.</span> <span class="toc-text">6. 空值查询</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-ORDER-BY-%E5%AD%90%E5%8F%A5"><span class="toc-number">1.4.</span> <span class="toc-text">4. ORDER BY 子句</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%8D%87%E5%BA%8F%E6%8E%92%E5%88%97-ASC"><span class="toc-number">1.4.1.</span> <span class="toc-text">1. 升序排列 ASC</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E9%99%8D%E5%BA%8F%E6%8E%92%E5%88%97-DESC"><span class="toc-number">1.4.2.</span> <span class="toc-text">2. 降序排列 DESC</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E5%BC%95%E7%94%A8%E5%AD%97%E6%AE%B5%E5%88%AB%E5%90%8D%E6%8E%92%E5%BA%8F"><span class="toc-number">1.4.3.</span> <span class="toc-text">3. 引用字段别名排序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E5%BC%95%E7%94%A8%E5%AD%97%E6%AE%B5%E9%A1%BA%E5%BA%8F%E5%8F%B7%E6%8E%92%E5%BA%8F"><span class="toc-number">1.4.4.</span> <span class="toc-text">4. 引用字段顺序号排序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E5%A4%9A%E5%88%97%E7%BB%84%E5%90%88%E6%8E%92%E5%BA%8F"><span class="toc-number">1.4.5.</span> <span class="toc-text">5. 多列组合排序</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-%E9%99%90%E5%88%B6%E8%BF%94%E5%9B%9E%E7%9A%84%E8%A1%8C%E6%95%B0"><span class="toc-number">1.5.</span> <span class="toc-text">5. 限制返回的行数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E9%99%90%E5%88%B6%E8%BF%94%E5%9B%9E%E7%9A%84%E8%A1%8C%E6%95%B0"><span class="toc-number">1.5.1.</span> <span class="toc-text">1. 限制返回的行数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E5%88%86%E9%A1%B5%E6%9F%A5%E8%AF%A2"><span class="toc-number">1.5.2.</span> <span class="toc-text">2. 分页查询</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-DISTINCT-%E5%85%B3%E9%94%AE%E5%AD%97"><span class="toc-number">1.5.3.</span> <span class="toc-text">3. DISTINCT 关键字</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-%E5%A4%9A%E8%A1%A8%E6%9F%A5%E8%AF%A2"><span class="toc-number">2.</span> <span class="toc-text">2. 多表查询</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -229,8 +518,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
