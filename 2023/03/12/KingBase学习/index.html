@@ -15,11 +15,17 @@
 <meta property="og:site_name" content="lt_haha">
 <meta property="og:description" content="1. 单表查询">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://liutao127.github.io/2023/03/12/KingBase%E5%AD%A6%E4%B9%A0/%E5%86%85%E8%BF%9E%E6%8E%A5-%E6%A6%82%E8%BF%B0.png">
+<meta property="og:image" content="http://liutao127.github.io/2023/03/12/KingBase%E5%AD%A6%E4%B9%A0/%E5%A4%96%E8%BF%9E%E6%8E%A5-%E6%A6%82%E8%BF%B01.png">
+<meta property="og:image" content="http://liutao127.github.io/2023/03/12/KingBase%E5%AD%A6%E4%B9%A0/%E5%A4%96%E8%BF%9E%E6%8E%A5-%E6%A6%82%E8%BF%B02.png">
+<meta property="og:image" content="http://liutao127.github.io/2023/03/12/KingBase%E5%AD%A6%E4%B9%A0/%E5%A4%96%E8%BF%9E%E6%8E%A5-%E6%A6%82%E8%BF%B03.png">
+<meta property="og:image" content="http://liutao127.github.io/2023/03/12/KingBase%E5%AD%A6%E4%B9%A0/%E4%BA%A4%E5%8F%89%E8%BF%9E%E6%8E%A5-%E6%A6%82%E8%BF%B0.png">
 <meta property="article:published_time" content="2023-03-12T07:29:20.000Z">
-<meta property="article:modified_time" content="2023-03-12T09:34:34.979Z">
+<meta property="article:modified_time" content="2023-03-13T02:40:32.140Z">
 <meta property="article:author" content="coderLT">
 <meta property="article:tag" content="KingBase">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://liutao127.github.io/2023/03/12/KingBase%E5%AD%A6%E4%B9%A0/%E5%86%85%E8%BF%9E%E6%8E%A5-%E6%A6%82%E8%BF%B0.png">
   
     <link rel="alternative" href="/atom.xml" title="lt_haha" type="application/atom+xml">
   
@@ -298,7 +304,114 @@
 </tbody></table>
 <h3 id="3-DISTINCT-关键字"><a href="#3-DISTINCT-关键字" class="headerlink" title="3. DISTINCT 关键字"></a>3. DISTINCT 关键字</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># 1、查看student表中的城市的数量（含重复值）。</span><br><span class="line">SELECT count(city)FROM student;</span><br><span class="line"># 2、查看student表中的城市的数量（去掉重复值)。</span><br><span class="line">select count(DISTINCT city) from student;</span><br></pre></td></tr></table></figure>
 
-<h1 id="2-多表查询"><a href="#2-多表查询" class="headerlink" title="2. 多表查询"></a>2. 多表查询</h1>
+<h1 id="2-多表查询"><a href="#2-多表查询" class="headerlink" title="2. 多表查询"></a>2. 多表查询</h1><h2 id="1-多表查询的用途"><a href="#1-多表查询的用途" class="headerlink" title="1. 多表查询的用途"></a>1. 多表查询的用途</h2><ol>
+<li>多表查询能够执行跨表数据检索，常用于报表和统计分析。</li>
+<li>用于连接查询的多张表中具有逻辑相关性的列，可用于连接查询条件。</li>
+<li>连接查询的分类。</li>
+</ol>
+<p><strong>连接查询的分类</strong></p>
+<ol>
+<li>按照结果集输出方式分为内连接查询、外连接查询、交叉连接查询。</li>
+<li>按照连接条件的比较运算符分为等值连接查询、非等值连接查询。</li>
+<li>其他特殊连接方式有自然连接、自连接。</li>
+</ol>
+<h2 id="2-内连接"><a href="#2-内连接" class="headerlink" title="2. 内连接"></a>2. 内连接</h2><h3 id="1-概述"><a href="#1-概述" class="headerlink" title="1. 概述"></a>1. 概述</h3><p><strong>内连接根据两个连接表的同名列或逻辑相关列的值进行比较，返回与连接条件匹配的行数据。如下图所示，内连接只显示两张表匹配的行。</strong></p>
+<img src="/2023/03/12/KingBase%E5%AD%A6%E4%B9%A0/%E5%86%85%E8%BF%9E%E6%8E%A5-%E6%A6%82%E8%BF%B0.png" class>
+
+<h3 id="2-语法大纲"><a href="#2-语法大纲" class="headerlink" title="2. 语法大纲"></a>2. 语法大纲</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">T1 &#123;[ INNER ]&#125; JOIN T2 ON boolean_expression</span><br><span class="line">T1 &#123;[ INNER ]&#125; JOIN T2 USING ( join column lsit )</span><br><span class="line"># 注意</span><br><span class="line"># (1)INNER 是可选的</span><br><span class="line"># (2)INNER 是缺省值</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-部分参数简介"><a href="#3-部分参数简介" class="headerlink" title="3. 部分参数简介"></a>3. 部分参数简介</h3><table>
+<thead>
+<tr>
+<th>参数</th>
+<th>简介</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>INNER JOIN</td>
+<td>对于T1表的每一行R1，生成的连接表都有一行对应T2表中的每一个满足和Rl的连接条件的行。</td>
+</tr>
+<tr>
+<td>ON</td>
+<td>0N子句是最常见的连接条件的形式:它接受一个和WHERE子句里用的一样的布尔值表达式。如果两个分别来自T1和T2的行在ON表达式上运算的结果为真，那么它们就算是匹配的行。</td>
+</tr>
+<tr>
+<td>USING</td>
+<td>USING是个缩写符号，它允许你利用特殊的情况:连接的两端都具有相同的连接列名。它接受共享列名的一个逗号分隔列表，并且为其中每一个共享列构造一个包含等值比较的连接条件。例如用USING (a， b)连接T1和T2会产生连接条件ON T1.a = T2.a AND T1.b = T2.b。<br>更进一步，JOIN USING 的输出会废除冗余列:不需要把匹配上的列都打印出来，因为它们必须具有相等的值。不过JOIN ON 会先产生来自T1的所有列，后面跟上所有来自T2的列;而JOIN USING 会先为列出的每一个列对产生一个输出列，然后先跟上来自T1的剩余列，最后跟上来自T2的剩余列。</td>
+</tr>
+</tbody></table>
+<h2 id="3-外连接"><a href="#3-外连接" class="headerlink" title="3. 外连接"></a>3. 外连接</h2><h3 id="1-概述-1"><a href="#1-概述-1" class="headerlink" title="1. 概述"></a>1. 概述</h3><p>(1) 左外连接的结果集包括LEFT OUTER子句中指定的左表的所有行，而不仅仅是连接列所匹配的行。如果左表的某行在右表中没有匹配行，则在相关联的结果集行中来自右表的所有列均为空值。如下图所示，左外连接显示左右两表匹配的行和左表中与右表不匹配的行。</p>
+<img src="/2023/03/12/KingBase%E5%AD%A6%E4%B9%A0/%E5%A4%96%E8%BF%9E%E6%8E%A5-%E6%A6%82%E8%BF%B01.png" class>
+
+<p>(2) 右外连接是左向外连接的反向连接。将返回右表的所有行。如果右表的某行在左表中没有匹配行，则在相关联的结果集行中来自左表的所有列均为空值。如下图所示，右外连接显示左右两表匹配的行和右表中与左表不匹配的行。</p>
+<img src="/2023/03/12/KingBase%E5%AD%A6%E4%B9%A0/%E5%A4%96%E8%BF%9E%E6%8E%A5-%E6%A6%82%E8%BF%B02.png" class>
+
+<p>(3) 全外连接返回左表和右表中的所有行。当一个表中的某行在另一个表中没有匹配行时，则在相关联的结果集行中来自另一个表的所有列返回空值。如果表之间有匹配行，则整个结果集行包含基表的数据值。如下图所示，全外连接显式两表匹配的行和不匹配的行。</p>
+<img src="/2023/03/12/KingBase%E5%AD%A6%E4%B9%A0/%E5%A4%96%E8%BF%9E%E6%8E%A5-%E6%A6%82%E8%BF%B03.png" class>
+
+<h3 id="2-语法大纲-1"><a href="#2-语法大纲-1" class="headerlink" title="2. 语法大纲"></a>2. 语法大纲</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">T1 &#123; &#123; LEFT | RIGHT | FULL &#125; [OUTER] &#125; JOIN T2 ON boolean_expression</span><br><span class="line">T1 &#123; &#123; LEFT | RIGHT | FULL &#125; [OUTER] &#125; JOIN T2 USING ( join column list )</span><br><span class="line"># 注意</span><br><span class="line"># OUTER 是可选的</span><br><span class="line"># LEFT RIGHT FULL 指示外连接类型</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-部分参数简介-1"><a href="#3-部分参数简介-1" class="headerlink" title="3. 部分参数简介"></a>3. 部分参数简介</h3><table>
+<thead>
+<tr>
+<th>参数</th>
+<th>简介</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>LEFT OUTER JOIN</td>
+<td>首先，执行一次内连接。然后，为T1中每一个无法在连接条件上匹配T2里任何一行的行返回一个连接行，该连接行中属于T2的列用空值补齐。因此，生成的连接表里为来自T1的每一行都至少包含一行。</td>
+</tr>
+<tr>
+<td>RIGHT OUTER JOIN</td>
+<td>首先，执行一次内连接。然后，为T2中每一个无法在连接条件上匹配T1里任何一行的行返回一个连接行，该连接行中属于Tl 的列用空值补齐。因此，生成的连接表里为来自T2的每一行都至少包含一行。</td>
+</tr>
+<tr>
+<td>FULL OUTER JOIN</td>
+<td>首先，执行一次内连接。然后，为Tl中每一个无法在连接条件上匹配T2里任何一行的行返回一个连接行，该连接行中属于T2的列用空值补齐。同样，为T2中每一个无法在连接条件上匹配Tl里任何一行的行返回一个连接行，该连接行中属于Tl的列用空值补齐。</td>
+</tr>
+</tbody></table>
+<h2 id="4-交叉连接"><a href="#4-交叉连接" class="headerlink" title="4. 交叉连接"></a>4. 交叉连接</h2><h3 id="1-概述-2"><a href="#1-概述-2" class="headerlink" title="1. 概述"></a>1. 概述</h3><p>交叉连接返回左右两表基于元组的笛卡尔积</p>
+<img src="/2023/03/12/KingBase%E5%AD%A6%E4%B9%A0/%E4%BA%A4%E5%8F%89%E8%BF%9E%E6%8E%A5-%E6%A6%82%E8%BF%B0.png" class>
+
+<h3 id="2-语法大纲-2"><a href="#2-语法大纲-2" class="headerlink" title="2. 语法大纲"></a>2. 语法大纲</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">T1 CROSS JOIN T2</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-部分参数简介-2"><a href="#3-部分参数简介-2" class="headerlink" title="3. 部分参数简介"></a>3. 部分参数简介</h3><table>
+<thead>
+<tr>
+<th>参数</th>
+<th>简介</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>CROSS JOIN</td>
+<td>对来自于T1和T2的行的每一种可能的组合(即笛卡尔积)，连接表将包含这样一行:它由所有T1里面的列后面跟着所有T2里面的列构成。如果两个表分别有M和N行，连接表将有M*N行。</td>
+</tr>
+</tbody></table>
+<h2 id="5-等值连接与非等值连接"><a href="#5-等值连接与非等值连接" class="headerlink" title="5. 等值连接与非等值连接"></a>5. 等值连接与非等值连接</h2><h3 id="1-等值连接"><a href="#1-等值连接" class="headerlink" title="1. 等值连接"></a>1. 等值连接</h3><p>  连接条件中的比较运算符为” = “</p>
+<h3 id="2-非等值连接"><a href="#2-非等值连接" class="headerlink" title="2. 非等值连接"></a>2. 非等值连接</h3><p>  连接条件中的比较运算符为非” = “ , 比如 &gt;= ,  &gt; , &lt;= , &lt; , &lt;&gt; , between … and … 等</p>
+<h2 id="6-自然连接与自连接"><a href="#6-自然连接与自连接" class="headerlink" title="6. 自然连接与自连接"></a>6. 自然连接与自连接</h2><h3 id="1-自然连接"><a href="#1-自然连接" class="headerlink" title="1. 自然连接"></a>1. 自然连接</h3><h4 id="1-概述-3"><a href="#1-概述-3" class="headerlink" title="1. 概述"></a>1. 概述</h4><p>  自然连接是等值连接的一种特殊形式，使用NATURAL关键字代替连接条件，通过两张或者多张表中所有具有相同名称的字段进行等值连接。多个同名字段连接时，逻辑运算符为AND。在自然连接中遇到关联表中的同名字段具有不匹配的或不可隐式转换的数据类型时，会导致执行出错.</p>
+<h4 id="2-语法大纲-3"><a href="#2-语法大纲-3" class="headerlink" title="2. 语法大纲"></a>2. 语法大纲</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">I1 NATURAL &#123; [INNER] | &#123; LEFT | RIGHT | FULL &#125; [OUTER] &#125; JOIN T2</span><br></pre></td></tr></table></figure>
+
+<h4 id="3-部分参数简介-3"><a href="#3-部分参数简介-3" class="headerlink" title="3. 部分参数简介"></a>3. 部分参数简介</h4><table>
+<thead>
+<tr>
+<th>参数</th>
+<th>简介</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>NATURAL</td>
+<td>NATURAL是USING的缩写形式:它形成一个USING列表，该列表由那些在两个表里都出现了的列名组成。和USING一样，这些列只在输出表里出现一次。如果不存在公共列，NATURAL 的行为将和CROSS JOIN ( 交叉连接 | 笛卡尔积 )一样。</td>
+</tr>
+</tbody></table>
+<h3 id="2-自连接"><a href="#2-自连接" class="headerlink" title="2. 自连接"></a>2. 自连接</h3><p>  通过为表设置别名将一张表虚拟成两张表后进行连接操作，常用于一张表内列之间具有键值依赖的数据检索。</p>
+<h1 id="3-表的定义"><a href="#3-表的定义" class="headerlink" title="3. 表的定义"></a>3. 表的定义</h1><h2 id="1-表的基本概念"><a href="#1-表的基本概念" class="headerlink" title="1. 表的基本概念"></a>1. 表的基本概念</h2><ol>
+<li>在KES中表也称为关系，是从现实中抽象出来的一个关系对象，比如员工表、部门表。</li>
+<li>表是由行和列组成二维对象，列代表关系的一个属性，行代表属于关系的一个实体。</li>
+<li>数据类型用来定义表中字段所属的类型，必须为每个列指定数据类型。</li>
+</ol>
+
       
 	  
 	  
@@ -477,7 +590,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-%E5%8D%95%E8%A1%A8%E6%9F%A5%E8%AF%A2"><span class="toc-number">1.</span> <span class="toc-text">1. 单表查询</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-DQL%E8%AF%AD%E8%A8%80%E7%9A%84%E8%AF%AD%E6%B3%95"><span class="toc-number">1.1.</span> <span class="toc-text">1. DQL语言的语法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-SELECT%E5%AD%90%E5%8F%A5"><span class="toc-number">1.2.</span> <span class="toc-text">2. SELECT子句</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E6%9F%A5%E8%AF%A2%E6%89%80%E6%9C%89%E8%A1%8C%E5%92%8C%E6%89%80%E6%9C%89%E5%88%97"><span class="toc-number">1.2.1.</span> <span class="toc-text">1. 查询所有行和所有列</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E6%9F%A5%E8%AF%A2%E9%83%A8%E5%88%86%E5%88%97"><span class="toc-number">1.2.2.</span> <span class="toc-text">2. 查询部分列</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E5%8D%95%E5%BC%95%E5%8F%B7%E5%92%8C%E5%8F%8C%E5%BC%95%E5%8F%B7"><span class="toc-number">1.2.3.</span> <span class="toc-text">3. 单引号和双引号</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E8%BF%9E%E6%8E%A5%E8%BF%90%E7%AE%97"><span class="toc-number">1.2.4.</span> <span class="toc-text">4. 连接运算</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E7%AE%97%E6%9C%AF%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number">1.2.5.</span> <span class="toc-text">5. 算术运算符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-%E4%BD%BF%E7%94%A8%E6%9D%A1%E4%BB%B6%E8%A1%A8%E8%BE%BE%E5%BC%8F"><span class="toc-number">1.2.6.</span> <span class="toc-text">6. 使用条件表达式</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-WHERE%E5%AD%90%E5%8F%A5"><span class="toc-number">1.3.</span> <span class="toc-text">3. WHERE子句</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E7%AD%89%E5%80%BC%E6%9F%A5%E8%AF%A2"><span class="toc-number">1.3.1.</span> <span class="toc-text">1. 等值查询</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E5%A4%9A%E6%9D%A1%E4%BB%B6%E5%8C%B9%E9%85%8D"><span class="toc-number">1.3.2.</span> <span class="toc-text">2. 多条件匹配</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97"><span class="toc-number">1.3.3.</span> <span class="toc-text">3. 逻辑运算</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E6%A8%A1%E7%B3%8A%E6%9F%A5%E8%AF%A2"><span class="toc-number">1.3.4.</span> <span class="toc-text">4. 模糊查询</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E8%8C%83%E5%9B%B4%E6%9F%A5%E8%AF%A2"><span class="toc-number">1.3.5.</span> <span class="toc-text">5. 范围查询</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-%E7%A9%BA%E5%80%BC%E6%9F%A5%E8%AF%A2"><span class="toc-number">1.3.6.</span> <span class="toc-text">6. 空值查询</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-ORDER-BY-%E5%AD%90%E5%8F%A5"><span class="toc-number">1.4.</span> <span class="toc-text">4. ORDER BY 子句</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%8D%87%E5%BA%8F%E6%8E%92%E5%88%97-ASC"><span class="toc-number">1.4.1.</span> <span class="toc-text">1. 升序排列 ASC</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E9%99%8D%E5%BA%8F%E6%8E%92%E5%88%97-DESC"><span class="toc-number">1.4.2.</span> <span class="toc-text">2. 降序排列 DESC</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E5%BC%95%E7%94%A8%E5%AD%97%E6%AE%B5%E5%88%AB%E5%90%8D%E6%8E%92%E5%BA%8F"><span class="toc-number">1.4.3.</span> <span class="toc-text">3. 引用字段别名排序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E5%BC%95%E7%94%A8%E5%AD%97%E6%AE%B5%E9%A1%BA%E5%BA%8F%E5%8F%B7%E6%8E%92%E5%BA%8F"><span class="toc-number">1.4.4.</span> <span class="toc-text">4. 引用字段顺序号排序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E5%A4%9A%E5%88%97%E7%BB%84%E5%90%88%E6%8E%92%E5%BA%8F"><span class="toc-number">1.4.5.</span> <span class="toc-text">5. 多列组合排序</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-%E9%99%90%E5%88%B6%E8%BF%94%E5%9B%9E%E7%9A%84%E8%A1%8C%E6%95%B0"><span class="toc-number">1.5.</span> <span class="toc-text">5. 限制返回的行数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E9%99%90%E5%88%B6%E8%BF%94%E5%9B%9E%E7%9A%84%E8%A1%8C%E6%95%B0"><span class="toc-number">1.5.1.</span> <span class="toc-text">1. 限制返回的行数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E5%88%86%E9%A1%B5%E6%9F%A5%E8%AF%A2"><span class="toc-number">1.5.2.</span> <span class="toc-text">2. 分页查询</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-DISTINCT-%E5%85%B3%E9%94%AE%E5%AD%97"><span class="toc-number">1.5.3.</span> <span class="toc-text">3. DISTINCT 关键字</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-%E5%A4%9A%E8%A1%A8%E6%9F%A5%E8%AF%A2"><span class="toc-number">2.</span> <span class="toc-text">2. 多表查询</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-%E5%8D%95%E8%A1%A8%E6%9F%A5%E8%AF%A2"><span class="toc-number">1.</span> <span class="toc-text">1. 单表查询</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-DQL%E8%AF%AD%E8%A8%80%E7%9A%84%E8%AF%AD%E6%B3%95"><span class="toc-number">1.1.</span> <span class="toc-text">1. DQL语言的语法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-SELECT%E5%AD%90%E5%8F%A5"><span class="toc-number">1.2.</span> <span class="toc-text">2. SELECT子句</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E6%9F%A5%E8%AF%A2%E6%89%80%E6%9C%89%E8%A1%8C%E5%92%8C%E6%89%80%E6%9C%89%E5%88%97"><span class="toc-number">1.2.1.</span> <span class="toc-text">1. 查询所有行和所有列</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E6%9F%A5%E8%AF%A2%E9%83%A8%E5%88%86%E5%88%97"><span class="toc-number">1.2.2.</span> <span class="toc-text">2. 查询部分列</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E5%8D%95%E5%BC%95%E5%8F%B7%E5%92%8C%E5%8F%8C%E5%BC%95%E5%8F%B7"><span class="toc-number">1.2.3.</span> <span class="toc-text">3. 单引号和双引号</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E8%BF%9E%E6%8E%A5%E8%BF%90%E7%AE%97"><span class="toc-number">1.2.4.</span> <span class="toc-text">4. 连接运算</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E7%AE%97%E6%9C%AF%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number">1.2.5.</span> <span class="toc-text">5. 算术运算符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-%E4%BD%BF%E7%94%A8%E6%9D%A1%E4%BB%B6%E8%A1%A8%E8%BE%BE%E5%BC%8F"><span class="toc-number">1.2.6.</span> <span class="toc-text">6. 使用条件表达式</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-WHERE%E5%AD%90%E5%8F%A5"><span class="toc-number">1.3.</span> <span class="toc-text">3. WHERE子句</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E7%AD%89%E5%80%BC%E6%9F%A5%E8%AF%A2"><span class="toc-number">1.3.1.</span> <span class="toc-text">1. 等值查询</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E5%A4%9A%E6%9D%A1%E4%BB%B6%E5%8C%B9%E9%85%8D"><span class="toc-number">1.3.2.</span> <span class="toc-text">2. 多条件匹配</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97"><span class="toc-number">1.3.3.</span> <span class="toc-text">3. 逻辑运算</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E6%A8%A1%E7%B3%8A%E6%9F%A5%E8%AF%A2"><span class="toc-number">1.3.4.</span> <span class="toc-text">4. 模糊查询</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E8%8C%83%E5%9B%B4%E6%9F%A5%E8%AF%A2"><span class="toc-number">1.3.5.</span> <span class="toc-text">5. 范围查询</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-%E7%A9%BA%E5%80%BC%E6%9F%A5%E8%AF%A2"><span class="toc-number">1.3.6.</span> <span class="toc-text">6. 空值查询</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-ORDER-BY-%E5%AD%90%E5%8F%A5"><span class="toc-number">1.4.</span> <span class="toc-text">4. ORDER BY 子句</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%8D%87%E5%BA%8F%E6%8E%92%E5%88%97-ASC"><span class="toc-number">1.4.1.</span> <span class="toc-text">1. 升序排列 ASC</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E9%99%8D%E5%BA%8F%E6%8E%92%E5%88%97-DESC"><span class="toc-number">1.4.2.</span> <span class="toc-text">2. 降序排列 DESC</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E5%BC%95%E7%94%A8%E5%AD%97%E6%AE%B5%E5%88%AB%E5%90%8D%E6%8E%92%E5%BA%8F"><span class="toc-number">1.4.3.</span> <span class="toc-text">3. 引用字段别名排序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E5%BC%95%E7%94%A8%E5%AD%97%E6%AE%B5%E9%A1%BA%E5%BA%8F%E5%8F%B7%E6%8E%92%E5%BA%8F"><span class="toc-number">1.4.4.</span> <span class="toc-text">4. 引用字段顺序号排序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E5%A4%9A%E5%88%97%E7%BB%84%E5%90%88%E6%8E%92%E5%BA%8F"><span class="toc-number">1.4.5.</span> <span class="toc-text">5. 多列组合排序</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-%E9%99%90%E5%88%B6%E8%BF%94%E5%9B%9E%E7%9A%84%E8%A1%8C%E6%95%B0"><span class="toc-number">1.5.</span> <span class="toc-text">5. 限制返回的行数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E9%99%90%E5%88%B6%E8%BF%94%E5%9B%9E%E7%9A%84%E8%A1%8C%E6%95%B0"><span class="toc-number">1.5.1.</span> <span class="toc-text">1. 限制返回的行数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E5%88%86%E9%A1%B5%E6%9F%A5%E8%AF%A2"><span class="toc-number">1.5.2.</span> <span class="toc-text">2. 分页查询</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-DISTINCT-%E5%85%B3%E9%94%AE%E5%AD%97"><span class="toc-number">1.5.3.</span> <span class="toc-text">3. DISTINCT 关键字</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-%E5%A4%9A%E8%A1%A8%E6%9F%A5%E8%AF%A2"><span class="toc-number">2.</span> <span class="toc-text">2. 多表查询</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E5%A4%9A%E8%A1%A8%E6%9F%A5%E8%AF%A2%E7%9A%84%E7%94%A8%E9%80%94"><span class="toc-number">2.1.</span> <span class="toc-text">1. 多表查询的用途</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E5%86%85%E8%BF%9E%E6%8E%A5"><span class="toc-number">2.2.</span> <span class="toc-text">2. 内连接</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E6%A6%82%E8%BF%B0"><span class="toc-number">2.2.1.</span> <span class="toc-text">1. 概述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E8%AF%AD%E6%B3%95%E5%A4%A7%E7%BA%B2"><span class="toc-number">2.2.2.</span> <span class="toc-text">2. 语法大纲</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E9%83%A8%E5%88%86%E5%8F%82%E6%95%B0%E7%AE%80%E4%BB%8B"><span class="toc-number">2.2.3.</span> <span class="toc-text">3. 部分参数简介</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E5%A4%96%E8%BF%9E%E6%8E%A5"><span class="toc-number">2.3.</span> <span class="toc-text">3. 外连接</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E6%A6%82%E8%BF%B0-1"><span class="toc-number">2.3.1.</span> <span class="toc-text">1. 概述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E8%AF%AD%E6%B3%95%E5%A4%A7%E7%BA%B2-1"><span class="toc-number">2.3.2.</span> <span class="toc-text">2. 语法大纲</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E9%83%A8%E5%88%86%E5%8F%82%E6%95%B0%E7%AE%80%E4%BB%8B-1"><span class="toc-number">2.3.3.</span> <span class="toc-text">3. 部分参数简介</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E4%BA%A4%E5%8F%89%E8%BF%9E%E6%8E%A5"><span class="toc-number">2.4.</span> <span class="toc-text">4. 交叉连接</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E6%A6%82%E8%BF%B0-2"><span class="toc-number">2.4.1.</span> <span class="toc-text">1. 概述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E8%AF%AD%E6%B3%95%E5%A4%A7%E7%BA%B2-2"><span class="toc-number">2.4.2.</span> <span class="toc-text">2. 语法大纲</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E9%83%A8%E5%88%86%E5%8F%82%E6%95%B0%E7%AE%80%E4%BB%8B-2"><span class="toc-number">2.4.3.</span> <span class="toc-text">3. 部分参数简介</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-%E7%AD%89%E5%80%BC%E8%BF%9E%E6%8E%A5%E4%B8%8E%E9%9D%9E%E7%AD%89%E5%80%BC%E8%BF%9E%E6%8E%A5"><span class="toc-number">2.5.</span> <span class="toc-text">5. 等值连接与非等值连接</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E7%AD%89%E5%80%BC%E8%BF%9E%E6%8E%A5"><span class="toc-number">2.5.1.</span> <span class="toc-text">1. 等值连接</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E9%9D%9E%E7%AD%89%E5%80%BC%E8%BF%9E%E6%8E%A5"><span class="toc-number">2.5.2.</span> <span class="toc-text">2. 非等值连接</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-%E8%87%AA%E7%84%B6%E8%BF%9E%E6%8E%A5%E4%B8%8E%E8%87%AA%E8%BF%9E%E6%8E%A5"><span class="toc-number">2.6.</span> <span class="toc-text">6. 自然连接与自连接</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E8%87%AA%E7%84%B6%E8%BF%9E%E6%8E%A5"><span class="toc-number">2.6.1.</span> <span class="toc-text">1. 自然连接</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E6%A6%82%E8%BF%B0-3"><span class="toc-number">2.6.1.1.</span> <span class="toc-text">1. 概述</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E8%AF%AD%E6%B3%95%E5%A4%A7%E7%BA%B2-3"><span class="toc-number">2.6.1.2.</span> <span class="toc-text">2. 语法大纲</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-%E9%83%A8%E5%88%86%E5%8F%82%E6%95%B0%E7%AE%80%E4%BB%8B-3"><span class="toc-number">2.6.1.3.</span> <span class="toc-text">3. 部分参数简介</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E8%87%AA%E8%BF%9E%E6%8E%A5"><span class="toc-number">2.6.2.</span> <span class="toc-text">2. 自连接</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-%E8%A1%A8%E7%9A%84%E5%AE%9A%E4%B9%89"><span class="toc-number">3.</span> <span class="toc-text">3. 表的定义</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E8%A1%A8%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="toc-number">3.1.</span> <span class="toc-text">1. 表的基本概念</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -600,11 +713,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">React</a>
+                <a href="javascript:void(0)" class="js-tag color5">HTTP</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Vue</a>
+                <a href="javascript:void(0)" class="js-tag color1">mysql</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">React</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -616,15 +733,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Vue</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">pug</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">HTTP</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">mysql</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -652,11 +765,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">vue2项目笔记</a>
+                <a href="javascript:void(0)" class="js-tag color3">数据结构与算法</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">数据结构与算法</a>
+                <a href="javascript:void(0)" class="js-tag color4">vue2项目笔记</a>
               </li>
             
             <div class="clearfix"></div>
